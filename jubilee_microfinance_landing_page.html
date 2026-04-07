@@ -1,0 +1,505 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans, sans-serif); }
+  .jm-page { background: var(--color-background-tertiary); color: var(--color-text-primary); }
+
+  .jm-nav { background: var(--color-background-primary); border-bottom: 0.5px solid var(--color-border-tertiary); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .jm-logo { display: flex; align-items: center; gap: 10px; }
+  .jm-logo-icon { width: 36px; height: 36px; background: #1B5E20; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+  .jm-logo-icon svg { width: 20px; height: 20px; fill: #A5D6A7; }
+  .jm-logo-text { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+  .jm-logo-text span { color: #2E7D32; }
+  .jm-nav-links { display: flex; gap: 1.5rem; }
+  .jm-nav-links a { font-size: 13px; color: var(--color-text-secondary); text-decoration: none; }
+  .jm-nav-links a:hover { color: var(--color-text-primary); }
+  .jm-nav-cta { background: #2E7D32; color: #E8F5E9; border: none; padding: 8px 18px; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; }
+
+  .jm-hero { background: linear-gradient(160deg, #1B5E20 0%, #2E7D32 50%, #388E3C 100%); padding: 5rem 2rem 4rem; text-align: center; }
+  .jm-hero-badge { display: inline-block; background: rgba(255,255,255,0.15); color: #C8E6C9; font-size: 12px; padding: 4px 12px; border-radius: 20px; margin-bottom: 1.5rem; border: 0.5px solid rgba(255,255,255,0.2); }
+  .jm-hero h1 { font-size: 38px; font-weight: 500; color: #fff; line-height: 1.2; margin-bottom: 1rem; max-width: 640px; margin-left: auto; margin-right: auto; }
+  .jm-hero h1 em { font-style: normal; color: #A5D6A7; }
+  .jm-hero p { font-size: 16px; color: #C8E6C9; max-width: 520px; margin: 0 auto 2rem; line-height: 1.7; }
+  .jm-hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .jm-btn-primary { background: #fff; color: #1B5E20; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 500; border: none; cursor: pointer; }
+  .jm-btn-outline { background: transparent; color: #fff; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 500; border: 1px solid rgba(255,255,255,0.4); cursor: pointer; }
+
+  .jm-stats { background: var(--color-background-primary); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .jm-stats-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); padding: 2rem; gap: 1rem; }
+  .jm-stat { text-align: center; padding: 1rem; }
+  .jm-stat-num { font-size: 26px; font-weight: 500; color: #2E7D32; }
+  .jm-stat-label { font-size: 12px; color: var(--color-text-secondary); margin-top: 4px; line-height: 1.4; }
+
+  .jm-section { max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem; }
+  .jm-section-label { font-size: 12px; font-weight: 500; color: #2E7D32; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+  .jm-section-title { font-size: 26px; font-weight: 500; margin-bottom: 0.75rem; color: var(--color-text-primary); }
+  .jm-section-sub { font-size: 15px; color: var(--color-text-secondary); line-height: 1.7; max-width: 580px; margin-bottom: 2.5rem; }
+
+  .jm-products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .jm-product-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 1.5rem; transition: border-color 0.2s; cursor: pointer; }
+  .jm-product-card:hover { border-color: #4CAF50; }
+  .jm-product-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+  .jm-product-icon svg { width: 20px; height: 20px; }
+  .jm-product-title { font-size: 15px; font-weight: 500; margin-bottom: 0.5rem; color: var(--color-text-primary); }
+  .jm-product-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1rem; }
+  .jm-product-rate { font-size: 12px; background: #E8F5E9; color: #2E7D32; padding: 3px 10px; border-radius: 20px; display: inline-block; }
+  .jm-product-link { font-size: 13px; color: #2E7D32; font-weight: 500; margin-top: 1rem; display: flex; align-items: center; gap: 4px; }
+
+  .jm-how { background: var(--color-background-primary); }
+  .jm-how-inner { max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem; }
+  .jm-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 2rem; position: relative; }
+  .jm-step { text-align: center; padding: 1rem; position: relative; }
+  .jm-step-num { width: 44px; height: 44px; border-radius: 50%; background: #E8F5E9; border: 2px solid #4CAF50; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 500; color: #2E7D32; margin: 0 auto 1rem; position: relative; z-index: 1; }
+  .jm-step-connector { position: absolute; top: 22px; left: 50%; right: -50%; height: 2px; background: #C8E6C9; z-index: 0; }
+  .jm-step:last-child .jm-step-connector { display: none; }
+  .jm-step-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 0.4rem; }
+  .jm-step-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+
+  .jm-savings { background: var(--color-background-tertiary); }
+  .jm-savings-inner { max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+  .jm-savings-img { background: #E8F5E9; border-radius: 12px; height: 280px; display: flex; align-items: center; justify-content: center; border: 0.5px solid #C8E6C9; }
+  .jm-savings-img svg { width: 120px; height: 120px; opacity: 0.7; }
+  .jm-saving-option { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 10px; display: flex; align-items: center; gap: 12px; }
+  .jm-saving-dot { width: 10px; height: 10px; border-radius: 50%; background: #4CAF50; flex-shrink: 0; }
+  .jm-saving-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+  .jm-saving-desc { font-size: 12px; color: var(--color-text-secondary); }
+
+  .jm-groups { background: var(--color-background-primary); }
+  .jm-groups-inner { max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem; }
+  .jm-group-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 2rem; }
+  .jm-group-card { border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 1.5rem; background: var(--color-background-secondary); }
+  .jm-group-card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+  .jm-group-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; flex-shrink: 0; }
+  .jm-group-name { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+  .jm-group-members { font-size: 12px; color: var(--color-text-secondary); }
+  .jm-group-benefit { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
+  .jm-group-tag { font-size: 11px; padding: 2px 8px; border-radius: 20px; display: inline-block; margin-top: 0.75rem; }
+
+  .jm-locations { background: #1B5E20; padding: 3rem 1.5rem; }
+  .jm-locations-inner { max-width: 960px; margin: 0 auto; }
+  .jm-locations h2 { font-size: 24px; font-weight: 500; color: #fff; margin-bottom: 0.5rem; }
+  .jm-locations p { font-size: 14px; color: #A5D6A7; margin-bottom: 2rem; }
+  .jm-branch-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .jm-branch { background: rgba(255,255,255,0.1); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 10px; padding: 1.25rem; }
+  .jm-branch-name { font-size: 14px; font-weight: 500; color: #fff; margin-bottom: 0.25rem; }
+  .jm-branch-info { font-size: 12px; color: #A5D6A7; line-height: 1.6; }
+  .jm-branch-badge { font-size: 11px; background: rgba(165,214,167,0.2); color: #A5D6A7; padding: 2px 8px; border-radius: 20px; display: inline-block; margin-top: 0.5rem; }
+
+  .jm-calc { background: var(--color-background-tertiary); }
+  .jm-calc-inner { max-width: 700px; margin: 0 auto; padding: 3rem 1.5rem; }
+  .jm-calc-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 16px; padding: 2rem; }
+  .jm-calc-row { margin-bottom: 1.5rem; }
+  .jm-calc-row label { font-size: 13px; color: var(--color-text-secondary); display: block; margin-bottom: 6px; }
+  .jm-calc-row select, .jm-calc-row input[type=range] { width: 100%; }
+  .jm-calc-row select { padding: 8px 12px; font-size: 14px; }
+  .jm-calc-display { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
+  .jm-calc-val { font-size: 22px; font-weight: 500; color: #2E7D32; }
+  .jm-calc-results { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 0.5px solid var(--color-border-tertiary); }
+  .jm-calc-result { background: var(--color-background-secondary); border-radius: 8px; padding: 1rem; }
+  .jm-calc-result-label { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 4px; }
+  .jm-calc-result-val { font-size: 18px; font-weight: 500; color: var(--color-text-primary); }
+
+  .jm-cta { background: var(--color-background-primary); border-top: 0.5px solid var(--color-border-tertiary); }
+  .jm-cta-inner { max-width: 700px; margin: 0 auto; padding: 4rem 1.5rem; text-align: center; }
+  .jm-cta h2 { font-size: 28px; font-weight: 500; margin-bottom: 1rem; color: var(--color-text-primary); }
+  .jm-cta p { font-size: 15px; color: var(--color-text-secondary); margin-bottom: 2rem; line-height: 1.7; }
+  .jm-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .jm-cta-btn-main { background: #2E7D32; color: #E8F5E9; padding: 13px 28px; border-radius: 8px; font-size: 14px; font-weight: 500; border: none; cursor: pointer; }
+  .jm-cta-btn-sec { background: transparent; color: #2E7D32; padding: 13px 28px; border-radius: 8px; font-size: 14px; font-weight: 500; border: 1px solid #4CAF50; cursor: pointer; }
+
+  .jm-footer { background: var(--color-background-secondary); border-top: 0.5px solid var(--color-border-tertiary); padding: 2rem 2rem 1rem; }
+  .jm-footer-inner { max-width: 960px; margin: 0 auto; }
+  .jm-footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+  .jm-footer-col-title { font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .jm-footer-col a { display: block; font-size: 13px; color: var(--color-text-secondary); text-decoration: none; margin-bottom: 0.4rem; }
+  .jm-footer-col p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
+  .jm-footer-bottom { border-top: 0.5px solid var(--color-border-tertiary); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center; }
+  .jm-footer-copy { font-size: 12px; color: var(--color-text-secondary); }
+  .jm-reg { font-size: 12px; color: var(--color-text-secondary); }
+
+  @media (max-width: 680px) {
+    .jm-products { grid-template-columns: 1fr; }
+    .jm-steps { grid-template-columns: repeat(2, 1fr); }
+    .jm-savings-inner { grid-template-columns: 1fr; }
+    .jm-group-cards { grid-template-columns: 1fr; }
+    .jm-branch-grid { grid-template-columns: repeat(2, 1fr); }
+    .jm-stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .jm-footer-top { grid-template-columns: 1fr 1fr; }
+    .jm-nav-links { display: none; }
+    .jm-hero h1 { font-size: 26px; }
+    .jm-calc-results { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="jm-page">
+
+  <nav class="jm-nav">
+    <div class="jm-logo">
+      <div class="jm-logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/><path d="M11 2v20" fill="none"/><circle cx="12" cy="12" r="3" fill="#A5D6A7"/></svg>
+      </div>
+      <div class="jm-logo-text"><span>Jubilee</span> Microfinance</div>
+    </div>
+    <div class="jm-nav-links">
+      <a href="#">Loans</a>
+      <a href="#">Savings</a>
+      <a href="#">Saving groups</a>
+      <a href="#">About</a>
+      <a href="#">Branches</a>
+    </div>
+    <button class="jm-nav-cta" onclick="sendPrompt('I want to apply for a loan at Jubilee Microfinance')">Apply now ↗</button>
+  </nav>
+
+  <section class="jm-hero">
+    <div class="jm-hero-badge">Serving Northern Uganda since 2010</div>
+    <h1>Grow your business, farm &amp; <em>future</em> with us</h1>
+    <p>Accessible loans, flexible savings, and financial empowerment for individuals, saving groups, and farmers across West Nile, Gulu, Soroti, and Lira.</p>
+    <div class="jm-hero-btns">
+      <button class="jm-btn-primary" onclick="sendPrompt('What loan products does Jubilee Microfinance offer?')">Explore our loans ↗</button>
+      <button class="jm-btn-outline" onclick="sendPrompt('Tell me about Jubilee Microfinance saving groups')">Join a saving group</button>
+    </div>
+  </section>
+
+  <div class="jm-stats">
+    <div class="jm-stats-inner">
+      <div class="jm-stat">
+        <div class="jm-stat-num">12,000+</div>
+        <div class="jm-stat-label">Active clients served</div>
+      </div>
+      <div class="jm-stat">
+        <div class="jm-stat-num">4 regions</div>
+        <div class="jm-stat-label">West Nile · Gulu · Soroti · Lira</div>
+      </div>
+      <div class="jm-stat">
+        <div class="jm-stat-num">UGX 8B+</div>
+        <div class="jm-stat-label">Loans disbursed to date</div>
+      </div>
+      <div class="jm-stat">
+        <div class="jm-stat-num">96%</div>
+        <div class="jm-stat-label">Loan repayment rate</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="jm-section">
+    <div class="jm-section-label">Our loan products</div>
+    <div class="jm-section-title">Finance for every need</div>
+    <p class="jm-section-sub">Whether you are growing a business, harvesting a season, or handling personal needs — we have a loan built for your situation.</p>
+    <div class="jm-products">
+      <div class="jm-product-card">
+        <div class="jm-product-icon" style="background:#E8F5E9;">
+          <svg viewBox="0 0 24 24" fill="#2E7D32"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="jm-product-title">Agricultural loan</div>
+        <div class="jm-product-desc">Seasonal financing for inputs, equipment, and farm expansion. Repayment aligned to harvest cycles so you are never strained mid-season.</div>
+        <span class="jm-product-rate">From 2.5% per month</span>
+        <div class="jm-product-link" onclick="sendPrompt('Tell me about Jubilee agricultural loans')">Learn more →</div>
+      </div>
+      <div class="jm-product-card">
+        <div class="jm-product-icon" style="background:#E3F2FD;">
+          <svg viewBox="0 0 24 24" fill="#1565C0"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+        </div>
+        <div class="jm-product-title">Business loan</div>
+        <div class="jm-product-desc">Capital for SMEs, traders, and entrepreneurs to stock, expand, or scale. Flexible terms from 3 to 24 months with no hidden charges.</div>
+        <span class="jm-product-rate">From 3% per month</span>
+        <div class="jm-product-link" onclick="sendPrompt('Tell me about Jubilee business loans')">Learn more →</div>
+      </div>
+      <div class="jm-product-card">
+        <div class="jm-product-icon" style="background:#FFF3E0;">
+          <svg viewBox="0 0 24 24" fill="#E65100"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        </div>
+        <div class="jm-product-title">Personal loan</div>
+        <div class="jm-product-desc">For school fees, medical bills, home improvements, or any personal need. Quick processing with minimal paperwork required.</div>
+        <span class="jm-product-rate">From 3.5% per month</span>
+        <div class="jm-product-link" onclick="sendPrompt('Tell me about Jubilee personal loans')">Learn more →</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="jm-how">
+    <div class="jm-how-inner">
+      <div class="jm-section-label">How it works</div>
+      <div class="jm-section-title">Get a loan in 4 simple steps</div>
+      <div class="jm-steps">
+        <div class="jm-step">
+          <div class="jm-step-connector"></div>
+          <div class="jm-step-num">1</div>
+          <div class="jm-step-title">Visit a branch</div>
+          <div class="jm-step-desc">Walk into any of our 4 regional branches and speak with an advisor.</div>
+        </div>
+        <div class="jm-step">
+          <div class="jm-step-connector"></div>
+          <div class="jm-step-num">2</div>
+          <div class="jm-step-title">Apply</div>
+          <div class="jm-step-desc">Fill out a short form. Bring your ID, photo, and any required documents.</div>
+        </div>
+        <div class="jm-step">
+          <div class="jm-step-connector"></div>
+          <div class="jm-step-num">3</div>
+          <div class="jm-step-title">Review &amp; approval</div>
+          <div class="jm-step-desc">Our team assesses your application — most decisions made within 48 hours.</div>
+        </div>
+        <div class="jm-step">
+          <div class="jm-step-num" style="background:#2E7D32; color:#E8F5E9; border-color:#1B5E20;">4</div>
+          <div class="jm-step-title">Receive funds</div>
+          <div class="jm-step-desc">Funds disbursed directly to your account or mobile money wallet.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="jm-savings">
+    <div class="jm-savings-inner">
+      <div class="jm-savings-img">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="15" y="30" width="70" height="50" rx="8" fill="#A5D6A7"/>
+          <rect x="25" y="20" width="50" height="20" rx="6" fill="#4CAF50"/>
+          <circle cx="50" cy="55" r="12" fill="#2E7D32"/>
+          <text x="50" y="60" text-anchor="middle" fill="#E8F5E9" font-size="14" font-weight="500">UGX</text>
+          <rect x="30" y="72" width="40" height="4" rx="2" fill="#4CAF50" opacity="0.5"/>
+        </svg>
+      </div>
+      <div>
+        <div class="jm-section-label">Savings accounts</div>
+        <div class="jm-section-title">Build your future, one shilling at a time</div>
+        <p style="font-size:14px; color:var(--color-text-secondary); line-height:1.7; margin-bottom:1.5rem;">Open a savings account today and enjoy competitive interest rates, no minimum balance penalties, and free financial literacy workshops.</p>
+        <div class="jm-saving-option">
+          <div class="jm-saving-dot"></div>
+          <div>
+            <div class="jm-saving-name">Regular savings</div>
+            <div class="jm-saving-desc">Open with as little as UGX 20,000 — earn 8% p.a. interest</div>
+          </div>
+        </div>
+        <div class="jm-saving-option">
+          <div class="jm-saving-dot" style="background:#1565C0;"></div>
+          <div>
+            <div class="jm-saving-name">Fixed deposit</div>
+            <div class="jm-saving-desc">Lock in savings for 3–12 months — earn up to 14% p.a.</div>
+          </div>
+        </div>
+        <div class="jm-saving-option">
+          <div class="jm-saving-dot" style="background:#E65100;"></div>
+          <div>
+            <div class="jm-saving-name">School fees savings</div>
+            <div class="jm-saving-desc">Dedicated account to plan for education costs each term</div>
+          </div>
+        </div>
+        <button class="jm-nav-cta" style="margin-top:1rem;" onclick="sendPrompt('I want to open a savings account at Jubilee Microfinance')">Open an account ↗</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="jm-groups">
+    <div class="jm-groups-inner">
+      <div class="jm-section-label">Saving groups</div>
+      <div class="jm-section-title">Stronger together — group financial solutions</div>
+      <p class="jm-section-sub">We support VSLA and SACCO-style saving groups with group loans, financial training, and record-keeping tools. Register your group and unlock better rates.</p>
+      <div class="jm-group-cards">
+        <div class="jm-group-card">
+          <div class="jm-group-card-head">
+            <div class="jm-group-avatar" style="background:#E8F5E9; color:#2E7D32;">WG</div>
+            <div>
+              <div class="jm-group-name">Women's saving group</div>
+              <div class="jm-group-members">5–30 members · Minimum UGX 500,000 saved</div>
+            </div>
+          </div>
+          <div class="jm-group-benefit">Groups receive access to a shared loan facility of up to 3× total savings. Ideal for women entrepreneurs and market traders.</div>
+          <span class="jm-group-tag" style="background:#E8F5E9; color:#2E7D32;">Preferred rates available</span>
+        </div>
+        <div class="jm-group-card">
+          <div class="jm-group-card-head">
+            <div class="jm-group-avatar" style="background:#E3F2FD; color:#1565C0;">AG</div>
+            <div>
+              <div class="jm-group-name">Agri saving group</div>
+              <div class="jm-group-members">5–50 members · Farming communities</div>
+            </div>
+          </div>
+          <div class="jm-group-benefit">Designed for farming cooperatives. Groups access seasonal loans for inputs, irrigation, and post-harvest storage with flexible repayment windows.</div>
+          <span class="jm-group-tag" style="background:#E3F2FD; color:#1565C0;">Harvest-cycle repayment</span>
+        </div>
+        <div class="jm-group-card">
+          <div class="jm-group-card-head">
+            <div class="jm-group-avatar" style="background:#FFF3E0; color:#E65100;">YG</div>
+            <div>
+              <div class="jm-group-name">Youth enterprise group</div>
+              <div class="jm-group-members">5–20 members · Ages 18–35</div>
+            </div>
+          </div>
+          <div class="jm-group-benefit">Youth groups get startup financing, free business mentorship, and digital financial literacy sessions to launch and grow small ventures.</div>
+          <span class="jm-group-tag" style="background:#FFF3E0; color:#E65100;">Mentorship included</span>
+        </div>
+        <div class="jm-group-card">
+          <div class="jm-group-card-head">
+            <div class="jm-group-avatar" style="background:#F3E5F5; color:#6A1B9A;">CB</div>
+            <div>
+              <div class="jm-group-name">Community SACCO</div>
+              <div class="jm-group-members">50+ members · Registered body</div>
+            </div>
+          </div>
+          <div class="jm-group-benefit">Formally registered SACCOs benefit from higher loan ceilings, savings mobilization support, and access to our financial reporting tools.</div>
+          <span class="jm-group-tag" style="background:#F3E5F5; color:#6A1B9A;">Enhanced loan limits</span>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem;">
+        <button class="jm-cta-btn-main" onclick="sendPrompt('How do I register my saving group with Jubilee Microfinance?')">Register your group ↗</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="jm-calc">
+    <div class="jm-calc-inner">
+      <div class="jm-section-label" style="text-align:center;">Loan calculator</div>
+      <div class="jm-section-title" style="text-align:center;">Estimate your repayment</div>
+      <p style="text-align:center; font-size:14px; color:var(--color-text-secondary); margin-bottom:2rem;">Adjust the sliders to see an instant repayment estimate.</p>
+      <div class="jm-calc-card">
+        <div class="jm-calc-row">
+          <label>Loan type</label>
+          <select id="loan-type" onchange="calcLoan()">
+            <option value="2.5">Agricultural loan — 2.5% / month</option>
+            <option value="3">Business loan — 3% / month</option>
+            <option value="3.5">Personal loan — 3.5% / month</option>
+          </select>
+        </div>
+        <div class="jm-calc-row">
+          <div class="jm-calc-display">
+            <label style="margin:0;">Loan amount</label>
+            <span class="jm-calc-val" id="amount-display">UGX 2,000,000</span>
+          </div>
+          <input type="range" min="500000" max="20000000" step="100000" value="2000000" id="amount-slider" oninput="calcLoan()">
+        </div>
+        <div class="jm-calc-row">
+          <div class="jm-calc-display">
+            <label style="margin:0;">Repayment period</label>
+            <span class="jm-calc-val" id="term-display">12 months</span>
+          </div>
+          <input type="range" min="3" max="24" step="1" value="12" id="term-slider" oninput="calcLoan()">
+        </div>
+        <div class="jm-calc-results">
+          <div class="jm-calc-result">
+            <div class="jm-calc-result-label">Monthly payment</div>
+            <div class="jm-calc-result-val" id="monthly-result">UGX 233,333</div>
+          </div>
+          <div class="jm-calc-result">
+            <div class="jm-calc-result-label">Total interest</div>
+            <div class="jm-calc-result-val" id="interest-result">UGX 600,000</div>
+          </div>
+          <div class="jm-calc-result">
+            <div class="jm-calc-result-label">Total repayable</div>
+            <div class="jm-calc-result-val" id="total-result">UGX 2,600,000</div>
+          </div>
+        </div>
+        <p style="font-size:11px; color:var(--color-text-secondary); margin-top:1rem;">Estimates only. Actual rates confirmed at branch upon application.</p>
+        <button class="jm-nav-cta" style="margin-top:1rem; width:100%; padding:13px;" onclick="sendPrompt('I want to apply for a loan at Jubilee Microfinance')">Apply for this loan ↗</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="jm-locations">
+    <div class="jm-locations-inner">
+      <div class="jm-section-label" style="color:#A5D6A7;">Our branches</div>
+      <h2>Find us near you</h2>
+      <p>Walk in Monday – Friday 8:00am to 5:00pm, and Saturday 9:00am – 1:00pm</p>
+      <div class="jm-branch-grid">
+        <div class="jm-branch">
+          <div class="jm-branch-name">Arua (Head office)</div>
+          <div class="jm-branch-info">Plot 14, Avenue Road, Arua City<br>+256 772 000 001</div>
+          <span class="jm-branch-badge">West Nile</span>
+        </div>
+        <div class="jm-branch">
+          <div class="jm-branch-name">Gulu branch</div>
+          <div class="jm-branch-info">Acholi Rd, Gulu City<br>+256 772 000 002</div>
+          <span class="jm-branch-badge">Northern UG</span>
+        </div>
+        <div class="jm-branch">
+          <div class="jm-branch-name">Soroti branch</div>
+          <div class="jm-branch-info">Gweri Rd, Soroti City<br>+256 772 000 003</div>
+          <span class="jm-branch-badge">Eastern UG</span>
+        </div>
+        <div class="jm-branch">
+          <div class="jm-branch-name">Lira branch</div>
+          <div class="jm-branch-info">Obote Avenue, Lira City<br>+256 772 000 004</div>
+          <span class="jm-branch-badge">Northern UG</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="jm-cta">
+    <div class="jm-cta-inner">
+      <div class="jm-section-label" style="text-align:center;">Get started today</div>
+      <h2>Your financial journey starts here</h2>
+      <p>Join thousands of individuals, farmers, and saving groups across Northern Uganda who are building a better future with Jubilee Microfinance.</p>
+      <div class="jm-cta-btns">
+        <button class="jm-cta-btn-main" onclick="sendPrompt('I want to apply for a loan at Jubilee Microfinance — what do I need?')">Apply for a loan ↗</button>
+        <button class="jm-cta-btn-sec" onclick="sendPrompt('Tell me more about Jubilee Microfinance saving groups and how to join')">Join a saving group</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="jm-footer">
+    <div class="jm-footer-inner">
+      <div class="jm-footer-top">
+        <div class="jm-footer-col">
+          <div class="jm-logo" style="margin-bottom:0.75rem;">
+            <div class="jm-logo-icon" style="width:28px; height:28px;">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:14px; height:14px;"><circle cx="12" cy="12" r="5" fill="#A5D6A7"/></svg>
+            </div>
+            <div class="jm-logo-text" style="font-size:13px;"><span>Jubilee</span> Microfinance</div>
+          </div>
+          <p>Empowering communities across Northern Uganda through accessible financial services and economic inclusion since 2010.</p>
+        </div>
+        <div class="jm-footer-col">
+          <div class="jm-footer-col-title">Products</div>
+          <a href="#">Agricultural loans</a>
+          <a href="#">Business loans</a>
+          <a href="#">Personal loans</a>
+          <a href="#">Savings accounts</a>
+          <a href="#">Saving groups</a>
+        </div>
+        <div class="jm-footer-col">
+          <div class="jm-footer-col-title">Company</div>
+          <a href="#">About us</a>
+          <a href="#">Our team</a>
+          <a href="#">Careers</a>
+          <a href="#">News</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="jm-footer-col">
+          <div class="jm-footer-col-title">Branches</div>
+          <a href="#">Arua (HQ)</a>
+          <a href="#">Gulu</a>
+          <a href="#">Soroti</a>
+          <a href="#">Lira</a>
+        </div>
+      </div>
+      <div class="jm-footer-bottom">
+        <div class="jm-footer-copy">© 2025 Jubilee Microfinance Ltd. All rights reserved.</div>
+        <div class="jm-reg">Regulated by Bank of Uganda · MDI License No. MDI/0XX</div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+function fmt(n) {
+  return 'UGX ' + Math.round(n).toLocaleString();
+}
+function calcLoan() {
+  var rate = parseFloat(document.getElementById('loan-type').value) / 100;
+  var amount = parseInt(document.getElementById('amount-slider').value);
+  var term = parseInt(document.getElementById('term-slider').value);
+
+  document.getElementById('amount-display').textContent = fmt(amount);
+  document.getElementById('term-display').textContent = term + ' months';
+
+  var totalInterest = amount * rate * term;
+  var totalRepayable = amount + totalInterest;
+  var monthly = totalRepayable / term;
+
+  document.getElementById('monthly-result').textContent = fmt(monthly);
+  document.getElementById('interest-result').textContent = fmt(totalInterest);
+  document.getElementById('total-result').textContent = fmt(totalRepayable);
+}
+calcLoan();
+</script>
