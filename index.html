@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jubilee Microfinance | Institutional Grade Financial Ecosystems | Northern Uganda</title>
-    
-    <!-- SEO -->
-    <meta name="description" content="Jubilee Microfinance is a premium financial institution serving Northern Uganda. Explore our specialized agricultural, business, and personal lending ecosystems.">
-    <meta name="keywords" content="microfinance Uganda, high-growth business loans, agricultural ecosystem financing, SME capital, financial inclusion Northern Uganda">
+    <title>Jubilee Microfinance | Precision Green-Blue Finance Ecosystem</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
     
     <!-- Vendor CSS -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
@@ -20,38 +15,24 @@
     <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/vendor/aos/aos.css">
     
-    <!-- Modern Design System -->
+    <!-- Strict Design System -->
     <link rel="stylesheet" href="assets/css/main.css">
     
     <style>
-        /* Smooth Scrolling */
+        /* Modern Scroll & Nav */
         html { scroll-behavior: smooth; }
+        .navbar-minimal { padding: 1.5rem 0; background: transparent; transition: 0.5s; }
+        .navbar-minimal.scrolled { background: rgba(0, 26, 51, 0.95); backdrop-filter: blur(20px); padding: 1rem 0; }
         
-        /* Layout Adjustments */
-        .navbar-minimal { transition: 0.4s; background: transparent; padding: 1.5rem 0; }
-        .navbar-minimal.scrolled { background: rgba(10, 25, 47, 0.95); backdrop-filter: blur(15px); padding: 1rem 0; }
         .section-jump { padding-top: 100px; margin-top: -100px; }
-        
-        /* Custom UI Enhancements */
-        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; padding: 2rem; }
-        .text-accent { color: var(--accent); }
-        .bg-obsidian { background-color: #0a192f; }
-        
-        /* Mobile Panel Fix */
-        .mobile-nav-panel {
-            position: fixed; top: 0; right: -100%; width: 85%; max-width: 400px; height: 100vh;
-            background: #0a192f; z-index: 9999; transition: 0.5s; padding: 40px; box-shadow: -10px 0 30px rgba(0,0,0,0.5);
-        }
-        .mobile-nav-panel.active { right: 0; }
-        .mobile-nav-panel .nav-link-m { font-size: 1.5rem; font-weight: 700; color: white; text-decoration: none; display: block; margin-bottom: 25px; transition: 0.3s; }
-        .close-mobile-nav { background: none; border: none; color: white; font-size: 2rem; position: absolute; top: 30px; right: 30px; }
+        .bg-gradient-blue-green { background: linear-gradient(135deg, #001a33 0%, #10b981 100%); }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120">
 
     <!-- Preloader -->
-    <div id="preloader" style="position: fixed; inset: 0; z-index: 10000; background: #0a192f; display: flex; align-items: center; justify-content: center; transition: 0.5s;">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem; border-width: 0.3em;" role="status"></div>
+    <div id="preloader" style="position: fixed; inset: 0; z-index: 10000; background: #001a33; display: flex; align-items: center; justify-content: center; transition: 0.5s;">
+        <div class="spinner-border text-emerald" style="width: 3rem; height: 3rem;"></div>
     </div>
 
     <!-- Navigation -->
@@ -60,213 +41,182 @@
             <a href="#top" class="logo-wrap">
                 <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 55px; filter: brightness(0) invert(1);">
             </a>
-            
             <div class="nav-links-p d-none d-lg-flex">
                 <a href="#top" class="nav-item-p text-white">Home</a>
-                <a href="#about" class="nav-item-p text-white">Who We Are</a>
+                <a href="#about" class="nav-item-p text-white">Trust Pillars</a>
                 <a href="#ecosystems" class="nav-item-p text-white">Ecosystems</a>
                 <a href="#impact" class="nav-item-p text-white">Impact</a>
                 <a href="#branches" class="nav-item-p text-white">Hubs</a>
-                <a href="#contact" class="btn-premium btn-p-primary btn-sm ms-4">Network Inquiry</a>
+                <a href="#contact" class="btn btn-emerald btn-sm ms-4">Join Hub</a>
             </div>
-
-            <button class="menu-toggle-p d-lg-none" id="mobileNavToggle">
-                <i class="bi bi-grid-3x3-gap-fill text-white"></i>
-            </button>
+            <button class="btn btn-link text-white d-lg-none" id="mobileNavToggle"><i class="bi bi-grid-3x3-gap-fill fs-2"></i></button>
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav-panel" id="mobileNavPanel">
-        <button class="close-mobile-nav" id="closeMobileNav"><i class="bi bi-x-lg"></i></button>
-        <div class="mb-5 mt-4">
-             <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 45px; filter: brightness(0) invert(1);">
-        </div>
-        <nav>
-            <a href="#top" class="nav-link-m">Home</a>
-            <a href="#about" class="nav-link-m">Who We Are</a>
-            <a href="#ecosystems" class="nav-link-m">Ecosystems</a>
-            <a href="#impact" class="nav-link-m">Impact Report</a>
-            <a href="#branches" class="nav-link-m">Regional Hubs</a>
-            <a href="#contact" class="nav-link-m">Join Now</a>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav-panel" id="mobileNavPanel" style="position: fixed; top: 0; right: -100%; width: 85%; height: 100vh; background: #001a33; z-index: 9999; transition: 0.5s; padding: 40px;">
+        <button class="btn btn-link text-white position-absolute" id="closeMobileNav" style="top: 30px; right: 30px;"><i class="bi bi-x-lg fs-2"></i></button>
+        <div class="mb-5"><img src="assets/images/logo-jubilee.png" height="40" style="background: white; border-radius: 5px; padding: 5px;"></div>
+        <nav class="d-flex flex-column gap-4">
+            <a href="#top" class="h3 font-weight-bold text-white nav-link-m">Home</a>
+            <a href="#about" class="h3 font-weight-bold text-white nav-link-m">Trust Pillars</a>
+            <a href="#ecosystems" class="h3 font-weight-bold text-white nav-link-m">Ecosystems</a>
+            <a href="#contact" class="btn btn-emerald w-100 p-3">Join Now</a>
         </nav>
     </div>
 
     <main id="top">
-        <!-- Hero Section -->
-        <section class="hero-v2 bg-obsidian text-white">
-            <div class="hero-bg-media">
-                <div class="hero-slide active" style="background-image: url('assets/images/pexels-kaypics-28112436.jpg'); opacity: 0.4;"></div>
+        <!-- Unique Hero Slider Section -->
+        <section class="slider-container-unique">
+            <div class="slide-unique active" style="background-image: url('assets/images/Agriculture.jpg'); background-size: cover; background-position: center;">
+                 <div class="slide-img-overlay"></div>
+                 <div class="container slide-content-unique text-white" data-aos="fade-right">
+                    <span class="badge bg-emerald text-white mb-4 px-3 py-2">Financing Regional Potential</span>
+                    <h1 class="display-1 fw-bold text-white">High-Impact <br><span style="color: #10b981;">Growth Capital.</span></h1>
+                    <p class="lead opacity-75 mb-5" style="max-width: 600px;">Optimized capital deployment for Northern Uganda's high-performance agricultural and commercial sectors.</p>
+                    <div class="d-flex gap-4">
+                        <a href="#contact" class="btn btn-emerald btn-lg h4 mb-0">Apply for Credit</a>
+                        <a href="#impact" class="btn btn-blue-outline btn-lg h4 mb-0 border-white text-white">Explore Metrics</a>
+                    </div>
+                 </div>
             </div>
-            <div class="hero-v2-overlay"></div>
-            <div class="container hero-v2-content" data-aos="fade-right">
-                <span class="badge bg-secondary mb-3 px-3 py-2">Institutional Quality Microfinance</span>
-                <h1 class="headline-xl">Empowering <br><span class="text-gradient">Potential.</span></h1>
-                <p class="hero-subtitle mb-5 opacity-75 lead" style="max-width: 600px;">Deploying data-driven capital across Northern Uganda's most promising sectors since 2012.</p>
-                
-                <div class="hero-btns-v2">
-                    <a href="#contact" class="btn-premium btn-p-primary">Apply for Funding <i class="bi bi-rocket-takeoff ms-2"></i></a>
-                    <a href="#impact" class="btn-premium btn-p-outline border-white text-white ms-md-4 mt-3 mt-md-0 d-inline-block">Impact Metrics</a>
-                </div>
-
-                <!-- Live Metrics Card -->
-                <div class="hero-stats-card mt-5" data-aos="fade-up" data-aos-delay="300">
-                    <div class="h-stat-item"><h3 class="counter">125B+</h3><p>Impact (UGX)</p></div>
-                    <div class="h-stat-item"><h3 class="counter">45,000</h3><p>Total Disbursals</p></div>
-                    <div class="h-stat-item"><h3 class="counter">98.2%</h3><p>Success Rate</p></div>
-                </div>
+            <!-- Slide 2 -->
+            <div class="slide-unique" style="background-image: url('assets/images/pexels-artempodrez-5716034.jpg'); background-size: cover; background-position: center;">
+                 <div class="slide-img-overlay"></div>
+                 <div class="container slide-content-unique text-white">
+                    <span class="badge bg-emerald text-white mb-4 px-3 py-2">Institutional Quality</span>
+                    <h1 class="display-1 fw-bold text-white">Trust Built on <br><span style="color: #10b981;">Performance.</span></h1>
+                    <p class="lead opacity-75 mb-5" style="max-width: 600px;">Delivering stability and governance-led finance for 13+ years across Arua, Gulu, and Lira hubs.</p>
+                    <a href="#about" class="btn btn-emerald btn-lg h4 mb-0">Learn More</a>
+                 </div>
+            </div>
+            
+            <div class="slider-nav">
+                <div class="slider-dot active" data-slide="0"></div>
+                <div class="slider-dot" data-slide="1"></div>
             </div>
         </section>
 
-        <!-- About Us Section -->
+        <!-- Trust Pillars Dashboard -->
         <section id="about" class="section-jump py-5 bg-white">
             <div class="container py-5">
-                <div class="row align-items-center gy-5">
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <span class="text-secondary fw-bold text-uppercase">Institutional Pillars</span>
-                        <h2 class="display-5 fw-bold text-primary mt-2">Established for Community Trust.</h2>
-                        <p class="lead text-muted mt-4">Jubilee Microfinance operates as a financial architect, focusing on high-growth potential within agricultural value-chains and SME clusters across West Nile, Gulu, Soroti, and Lira.</p>
-                        
-                        <div class="d-flex gap-4 mt-5">
-                            <div class="flex-shrink-0 text-secondary fs-2"><i class="bi bi-shield-check"></i></div>
-                            <div>
-                                <h4 class="fw-bold mb-2">Unwavering Governance</h4>
-                                <p class="small text-muted mb-0">Adopting global best practices to ensure every client's capital is protected.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex gap-4 mt-4">
-                            <div class="flex-shrink-0 text-secondary fs-2"><i class="bi bi-graph-up-arrow"></i></div>
-                            <div>
-                                <h4 class="fw-bold mb-2">Regional Expansion</h4>
-                                <p class="small text-muted mb-0">Strategically scaled to provide direct institutional access to capital in local hubs.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-left">
-                        <div class="position-relative">
-                             <img src="assets/images/pexels-artempodrez-5716034.jpg" alt="Governance" class="img-fluid rounded-4 shadow-lg">
-                             <div class="bg-secondary text-white p-4 rounded-4 shadow position-absolute top-100 start-0 translate-middle-y ms-4 d-none d-md-block" style="max-width: 250px;">
-                                <h4 class="fw-bold mb-1">13 Years</h4>
-                                <p class="small mb-0 opacity-75">Of continuous institutional growth and stability.</p>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ecosystems Section -->
-        <section id="ecosystems" class="section-jump py-5 bg-light">
-            <div class="container py-5">
-                <div class="text-center mb-5" data-aos="fade-up">
-                    <span class="text-secondary fw-bold text-uppercase">Sector Solutions</span>
-                    <h2 class="display-5 fw-bold">Precision Financing Ecosystems.</h2>
-                </div>
-                
-                <div class="row g-5 align-items-center mb-5 pb-5">
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <h3 class="display-6 fw-bold text-primary">Agricultural Capital Engine</h3>
-                        <p class="lead text-muted mt-4">A cyclic financing model designed for the Ugandan farming calendar, providing input advances, specialized equipment lease-to-own, and harvest bridges.</p>
-                        <ul class="list-unstyled mt-4 d-flex flex-column gap-3">
-                            <li class="d-flex gap-3"><i class="bi bi-check-circle-fill text-secondary"></i> <span>Seasonal Input Advances matched to harvest windows.</span></li>
-                            <li class="d-flex gap-3"><i class="bi bi-check-circle-fill text-secondary"></i> <span>Equipment Lease-to-Own for mechanization upgrades.</span></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-left"><img src="assets/images/Agriculture.jpg" class="img-fluid rounded-4 shadow-lg"></div>
-                </div>
-
-                <div class="row g-5 align-items-center flex-lg-row-reverse">
-                    <div class="col-lg-6" data-aos="fade-left">
-                        <h3 class="display-6 fw-bold text-primary">SME Growth Acceleration</h3>
-                        <p class="lead text-muted mt-4">Dedicated funding for wholesalers and high-impact local traders. We provide inventory liquidity and premise development capital to scale commercial hubs.</p>
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-right"><img src="assets/images/pexels-energepic-com-27411-2988232.jpg" class="img-fluid rounded-4 shadow-lg"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Impact Dashboard Section -->
-        <section id="impact" class="section-jump py-5 bg-obsidian text-white">
-            <div class="container py-5">
-                <div class="text-center mb-5" data-aos="fade-up">
-                    <span class="text-secondary fw-bold text-uppercase">Impact performance</span>
-                    <h2 class="display-5 fw-bold">Measuring Regional Prosperity.</h2>
-                </div>
-                
-                <div class="row g-4 mb-5">
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in">
-                        <div class="glass-card text-center h-100">
-                            <h3 class="display-6 fw-bold text-secondary counter">+24%</h3>
-                            <p class="small text-uppercase mt-2 opacity-50">Annual Growth</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="glass-card text-center h-100">
-                            <h3 class="display-6 fw-bold text-secondary counter">12,500</h3>
-                            <p class="small text-uppercase mt-2 opacity-50">Active Clients</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="glass-card text-center h-100">
-                            <h3 class="display-6 fw-bold text-secondary counter">25B</h3>
-                            <p class="small text-uppercase mt-2 opacity-50">Lending Liquidity</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="glass-card text-center h-100">
-                            <h3 class="display-6 fw-bold text-secondary counter">0.8%</h3>
-                            <p class="small text-uppercase mt-2 opacity-50">Portfolio NPL</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="impact-highlight rounded-4 p-5 text-center mt-5" style="border: 1px solid rgba(255,255,255,0.1); background: rgba(16,185,129,0.05);" data-aos="fade-up">
-                    <h2 class="fw-bold mb-4">98.2% Repayment Success Rate</h2>
-                    <p class="lead opacity-75 mx-auto" style="max-width: 800px;">A testament to our specialized client-relationship model and community-led due diligence across West Nile, Gulu, Soroti, and Lira regions.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Branches / Hubs Section -->
-        <section id="branches" class="section-jump py-5 bg-white">
-            <div class="container py-5">
                 <div class="row align-items-center mb-5" data-aos="fade-up">
-                    <div class="col-lg-6"><h2 class="display-5 fw-bold">Regional Access Hubs.</h2></div>
-                    <div class="col-lg-6"><p class="lead text-muted">Deep local presence across 4 major regions ensuring direct institutional support for your financial requirements.</p></div>
+                    <div class="col-lg-6"><h2 class="display-4 fw-bold text-primary-deep">Institutional Pillars of <br> Growth & Trust.</h2></div>
+                    <div class="col-lg-6"><p class="lead text-muted">A dedicated capital architect identifying high-growth potential within regional clusters and deploying quality capital to catalyze lasting impact.</p></div>
                 </div>
                 
                 <div class="row g-4">
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up"><div class="card p-4 border-0 shadow-sm rounded-4 h-100"><h5 class="fw-bold text-primary">Arua (HQ)</h5><p class="small text-muted mb-0">City House, 2nd Floor, Arua Hub</p></div></div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100"><div class="card p-4 border-0 shadow-sm rounded-4 h-100"><h5 class="fw-bold text-primary">Gulu Hub</h5><p class="small text-muted mb-0">Plot 45, Gulu Town Regional Hub</p></div></div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200"><div class="card p-4 border-0 shadow-sm rounded-4 h-100"><h5 class="fw-bold text-primary">Soroti Hub</h5><p class="small text-muted mb-0">Market Road Plaza, Soroti</p></div></div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300"><div class="card p-4 border-0 shadow-sm rounded-4 h-100"><h5 class="fw-bold text-primary">Lira Hub</h5><p class="small text-muted mb-0">Obote Avenue, Lira Regional</p></div></div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-unique-p h-100" style="background: rgba(0, 51, 102, 0.03); color: var(--primary-deep); border: none;">
+                            <div class="icon-circle-p"><i class="fas fa-landmark"></i></div>
+                            <h4 class="fw-bold mb-3">Governance-First</h4>
+                            <p class="small mb-0">Adopting global benchmarks in governance and financial safety to protect regional wealth.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-unique-p h-100" style="background: transparent; border: 2px solid #e1e1e1; color: var(--primary-deep);">
+                            <div class="icon-circle-p" style="background: var(--secondary-emerald);"><i class="fas fa-handshake"></i></div>
+                            <h4 class="fw-bold mb-3">Community Hubs</h4>
+                            <p class="small mb-0">Deep localized presence in Arua, Gulu, and Soroti for direct support to partners and clients.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Form Section -->
-        <section id="contact" class="section-jump py-5 bg-light">
+        <!-- Ecosystems Interactive Cards -->
+        <section id="ecosystems" class="section-jump py-5 section-blue-green">
             <div class="container py-5">
-                <div class="row g-5 align-items-center">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="text-emerald fw-bold text-uppercase">Sector-Specific Solutions</span>
+                    <h2 class="display-4 fw-bold text-white mt-2">Precision Finance Ecosystems.</h2>
+                </div>
+                
+                <div class="row g-5">
                     <div class="col-lg-6" data-aos="fade-right">
-                        <span class="text-secondary fw-bold text-uppercase">Contact Hub</span>
-                        <h2 class="display-5 fw-bold mt-2">Scale Your Impact.</h2>
-                        <p class="lead text-muted mt-4">Connect with our specialized financial architects today. We prioritize high-impact partnerships and sector-aligned credit solutions.</p>
-                        
-                        <div class="mt-5">
-                            <p class="mb-2"><i class="bi bi-telephone text-secondary me-3"></i> +256 709 300 099</p>
-                            <p class="mb-0"><i class="bi bi-envelope text-secondary me-3"></i> ops@jubileemicrofinance.com</p>
+                        <div class="card-unique-p h-100">
+                            <h3 class="fw-bold text-emerald mb-4">Agri-Value Cycle</h3>
+                            <p class="opacity-75 mb-4">Capital matched to the harvest cycle. We provide input advances and equipment lease-to-own for the regional farming belts.</p>
+                            <img src="assets/images/Agriculture.jpg" class="img-fluid rounded-4 shadow mb-4" alt="Agri Finance">
+                            <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
+                                <li class="d-flex gap-3"><i class="fas fa-check text-emerald"></i> <span>Seasonal Input Advances</span></li>
+                                <li class="d-flex gap-3"><i class="fas fa-check text-emerald"></i> <span>Equipment Transition Funding</span></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-left">
-                        <div class="card p-5 border-0 rounded-4 shadow">
-                            <form action="#" method="POST" id="mainInquiry">
+                        <div class="card-unique-p h-100">
+                            <h3 class="fw-bold text-teal mb-4">SME Growth Acceleration</h3>
+                            <p class="opacity-75 mb-4">Dynamic liquidity for traders and wholesalers. We boost inventory capacity and operational scaling for urban commercial hubs.</p>
+                            <img src="assets/images/pexels-energepic-com-27411-2988232.jpg" class="img-fluid rounded-4 shadow mb-4" alt="SME Finance">
+                            <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
+                                <li class="d-flex gap-3"><i class="fas fa-check text-emerald"></i> <span>Working Capital Injection</span></li>
+                                <li class="d-flex gap-3"><i class="fas fa-check text-emerald"></i> <span>Premise Expansion Capital</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Dashboard Layer -->
+        <section id="impact" class="section-jump py-5 bg-white">
+            <div class="container py-5">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-4 fw-bold text-primary-deep">Impact performance Metrics.</h2>
+                </div>
+                <div class="row g-4 text-center">
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="p-5 rounded-4 shadow-sm h-100" style="border: 1px solid #eee;">
+                            <h2 class="display-4 font-weight-bold text-primary-deep counter">125B+</h2>
+                            <p class="text-emerald text-uppercase fw-bold">UGX IMPACT</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="p-5 rounded-4 shadow-sm h-100 bg-gradient-blue-green text-white">
+                            <h2 class="display-4 font-weight-bold counter">98.2%</h2>
+                            <p class="text-accent-mint text-uppercase fw-bold">REPAYMENT RATE</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="p-5 rounded-4 shadow-sm h-100" style="border: 1px solid #eee;">
+                            <h2 class="display-4 font-weight-bold text-primary-deep counter">45,000</h2>
+                            <p class="text-emerald text-uppercase fw-bold">CLIENTS SERVED</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="p-5 rounded-4 shadow-sm h-100" style="background: rgba(20, 184, 166, 0.1);">
+                            <h2 class="display-4 font-weight-bold text-primary-deep counter">0.8%</h2>
+                            <p class="text-teal text-uppercase fw-bold">PORTFOLIO NPL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Hubs / Contact Hub -->
+        <section id="contact" class="section-jump py-5 bg-light">
+            <div class="container py-5">
+                <div class="card p-5 border-0 rounded-4 shadow shadow-lg overflow-hidden position-relative">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-6" data-aos="fade-right">
+                             <h2 class="display-5 fw-bold text-primary-deep">Connect with a <br><span class="text-emerald">Capital Architect.</span></h2>
+                             <p class="lead text-muted mt-4">Direct access to localized support. We optimize your financial trajectory with data-led credit solutions.</p>
+                             <div class="mt-5 text-primary-deep">
+                                 <p class="mb-2 h5"><i class="bi bi-geo-alt-fill text-emerald me-3"></i> Arua City House, 2nd Floor (HQ)</p>
+                                 <p class="mb-2 h5"><i class="bi bi-telephone-fill text-emerald me-3"></i> +256 709 300 099</p>
+                                 <p class="mb-0 h5"><i class="bi bi-envelope-fill text-emerald me-3"></i> ops@jubileemicrofinance.com</p>
+                             </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <form action="#" method="POST" class="p-4 bg-white rounded-4 shadow-sm border">
+                                <h4 class="fw-bold mb-4">Submit Network Inquiry</h4>
                                 <div class="row g-3">
-                                    <div class="col-12"><input type="text" class="form-control p-3 border-0 bg-light" placeholder="Institutional Name / Full Name" required></div>
-                                    <div class="col-12"><input type="email" class="form-control p-3 border-0 bg-light" placeholder="Inquiry Email Address" required></div>
-                                    <div class="col-12"><select class="form-select p-3 border-0 bg-light"><option>Agricultural Hub Inquiry</option><option>SME Expansion Capital</option><option>Group Savings Partnership</option></select></div>
-                                    <div class="col-12"><textarea class="form-control p-3 border-0 bg-light" rows="4" placeholder="How can we assist your growth goal?"></textarea></div>
-                                    <div class="col-12"><button type="submit" class="btn-premium btn-p-primary w-100 p-3 justify-content-center">Submit Hub Request</button></div>
+                                    <div class="col-12"><input type="text" class="form-control" placeholder="Full Name / Hub Organization" required></div>
+                                    <div class="col-12"><input type="email" class="form-control" placeholder="Contact Email" required></div>
+                                    <div class="col-12"><select class="form-select"><option>Agri-Value Cycle Funding</option><option>SME Acceleration Capital</option></select></div>
+                                    <div class="col-12"><textarea class="form-control" rows="4" placeholder="How can we assist your growth goal?"></textarea></div>
+                                    <div class="col-12"><button type="submit" class="btn btn-emerald w-100 p-3 justify-content-center">Request Deployment</button></div>
                                 </div>
                             </form>
                         </div>
@@ -276,64 +226,48 @@
         </section>
     </main>
 
-    <!-- Footer: Robust Company Info & Links -->
-    <footer class="footer-obsidian py-5 bg-obsidian text-white">
+    <!-- Refined Hub Footer -->
+    <footer class="footer-green-blue text-white">
         <div class="container py-4">
-            <div class="row g-5">
+            <div class="row gy-5">
                 <div class="col-lg-4">
                     <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 50px; filter: brightness(0) invert(1);">
-                    <p class="mt-4 opacity-75">Establishing the gold standard for institutional microfinance and capital empowerment across Northern Uganda's regional economies.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="text-white opacity-50"><i class="bi bi-linkedin fs-4"></i></a>
-                        <a href="#" class="text-white opacity-50"><i class="bi bi-twitter-x fs-4"></i></a>
-                        <a href="#" class="text-white opacity-50"><i class="bi bi-facebook fs-4"></i></a>
+                    <p class="mt-4 opacity-75">Scaling regional prosperity across Northern Uganda with precision-financing and institutional governance since 2012.</p>
+                    <div class="d-flex gap-4 mt-4 h4 mb-0 opacity-50">
+                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
-                
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold mb-4">Institutional Hubs</h5>
-                    <ul class="list-unstyled opacity-75 d-flex flex-column gap-3">
+                    <h5 class="fw-bold text-emerald mb-4">Quick Links</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
                         <li><a href="#about" class="text-white text-decoration-none">Who We Are</a></li>
-                        <li><a href="#ecosystems" class="text-white text-decoration-none">Ecosystem Financing</a></li>
-                        <li><a href="#impact" class="text-white text-decoration-none">Impact Performance</a></li>
-                        <li><a href="#branches" class="text-white text-decoration-none">Regional Presence</a></li>
+                        <li><a href="#ecosystems" class="text-white text-decoration-none">Financial Ecosystems</a></li>
+                        <li><a href="#impact" class="text-white text-decoration-none">Impact Dashboard</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Inquiry Hub</a></li>
                     </ul>
                 </div>
-                
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold mb-4">Useful Links</h5>
-                    <ul class="list-unstyled opacity-75 d-flex flex-column gap-3">
-                        <li><a href="#" class="text-white text-decoration-none">Investor Relations</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Apply for Funding</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Regional Governance</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Privacy & Compliance</a></li>
-                    </ul>
+                    <h5 class="fw-bold text-emerald mb-4">Institutional Info</h5>
+                    <p class="small opacity-75 mb-2"><strong>Registration:</strong> UG-MFI-00412</p>
+                    <p class="small opacity-75 mb-2"><strong>Tax Compliance:</strong> 100293485</p>
+                    <p class="small opacity-75"><strong>Auditors:</strong> Grant Thornton (UG)</p>
                 </div>
-                
-                <div class="col-lg-2">
-                    <h5 class="fw-bold mb-4">Company Info</h5>
-                    <p class="small opacity-75 mb-2"><strong>Reg No:</strong> MFI-UG-2012-045</p>
-                    <p class="small opacity-75 mb-2"><strong>Tax ID:</strong> 100293485</p>
-                    <p class="small opacity-75 mb-0"><strong>Auditor:</strong> Grant Thornton (UG)</p>
+                <div class="col-md-2 d-none d-lg-block">
+                    <div class="p-4 border border-secondary rounded-4 text-center">
+                        <h4 class="fw-bold mb-0">A+</h4>
+                        <p class="small opacity-75 mb-0">Asset Integrity</p>
+                    </div>
                 </div>
             </div>
-            
             <hr class="my-5 opacity-10">
-            
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center opacity-50 small">
                 <p class="mb-0">&copy; 2026 Jubilee Microfinance. All Rights Reserved.</p>
-                <p class="mb-0">Strategy by <a href="https://www.lwegatech.com" class="text-white" target="_blank">LWEGATECH</a> | Proudly Ugandan</p>
+                <p class="mb-0">Powered by <a href="https://www.lwegatech.com" class="text-white" target="_blank">LWEGATECH</a></p>
             </div>
         </div>
     </footer>
-
-    <!-- Back to Top -->
-    <a href="#top" class="back-to-top-p" id="backToTop"><i class="bi bi-chevron-up"></i></a>
-
-    <style>
-        .back-to-top-p { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--secondary); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: 0.4s; z-index: 1000; text-decoration: none; }
-        .back-to-top-p.active { opacity: 1; visibility: visible; }
-    </style>
 
     <!-- Scripts -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -341,61 +275,65 @@
     <script>
         AOS.init({ duration: 1000, once: true });
         
-        // Navigation Scroll Behavior
-        const mainNav = document.getElementById('mainNav');
-        const backToTop = document.getElementById('backToTop');
-        
+        // Navigation Logic
+        const nav = document.getElementById('mainNav');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                mainNav.classList.add('scrolled');
-                backToTop.classList.add('active');
-            } else {
-                mainNav.classList.remove('scrolled');
-                backToTop.classList.remove('active');
-            }
+            if (window.scrollY > 100) { nav.classList.add('scrolled'); }
+            else { nav.classList.remove('scrolled'); }
         });
 
-        // Mobile Menu Logic
-        const mobileNavToggle = document.getElementById('mobileNavToggle');
-        const closeMobileNav = document.getElementById('closeMobileNav');
-        const mobileNavPanel = document.getElementById('mobileNavPanel');
-        const mLinks = document.querySelectorAll('.nav-link-m');
+        // Unique Hero Slider Logic
+        const slides = document.querySelectorAll('.slide-unique');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
 
-        mobileNavToggle.addEventListener('click', () => { mobileNavPanel.classList.add('active'); document.body.style.overflow = 'hidden'; });
-        closeMobileNav.addEventListener('click', () => { mobileNavPanel.classList.remove('active'); document.body.style.overflow = 'auto'; });
-        mLinks.forEach(link => link.addEventListener('click', () => { mobileNavPanel.classList.remove('active'); document.body.style.overflow = 'auto'; }));
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
 
-        // Preloader Logic
+        dots.forEach((dot, idx) => dot.addEventListener('click', () => goToSlide(idx)));
+        setInterval(() => goToSlide((currentSlide + 1) % slides.length), 7000);
+
+        // Mobile Menu
+        const mToggle = document.getElementById('mobileNavToggle');
+        const mClose = document.getElementById('closeMobileNav');
+        const mPanel = document.getElementById('mobileNavPanel');
+        mToggle.addEventListener('click', () => mPanel.style.right = '0');
+        mClose.addEventListener('click', () => mPanel.style.right = '-100%');
+        document.querySelectorAll('.nav-link-m').forEach(l => l.addEventListener('click', () => mPanel.style.right = '-100%'));
+
+        // Preloader
         window.addEventListener('load', () => { 
-            const preloader = document.getElementById('preloader'); 
-            preloader.style.opacity = '0'; 
-            setTimeout(() => preloader.style.display = 'none', 500); 
+            const p = document.getElementById('preloader'); 
+            p.style.opacity = '0'; 
+            setTimeout(() => p.style.display = 'none', 500); 
         });
 
-        // Counter Animation Logic
+        // Counter Logic
         const counters = document.querySelectorAll('.counter');
         counters.forEach(counter => {
-            const updateCount = () => {
-                const targetText = counter.innerText;
-                const target = parseFloat(targetText.replace(/[^0-9.]/g, ''));
+            const update = () => {
+                const text = counter.innerText;
+                const target = parseFloat(text.replace(/[^0-9.]/g, ''));
                 const current = parseFloat(counter.getAttribute('data-count') || 0);
                 const step = target / 100;
-
                 if (current < target) {
-                    const next = current + step;
-                    counter.setAttribute('data-count', next);
-                    
-                    let result = (target % 1 === 0 ? Math.ceil(next) : next.toFixed(1));
-                    if (targetText.includes('B')) result += 'B';
-                    if (targetText.includes('+')) result += '+';
-                    if (targetText.includes('%')) result += '%';
-                    
-                    counter.innerText = result;
-                    setTimeout(updateCount, 15);
-                } else { counter.innerText = targetText; }
+                    const n = current + step;
+                    counter.setAttribute('data-count', n);
+                    let res = (target % 1 === 0 ? Math.ceil(n) : n.toFixed(1));
+                    if (text.includes('B')) res += 'B';
+                    if (text.includes('+')) res += '+';
+                    if (text.includes('%')) res += '%';
+                    counter.innerText = res;
+                    setTimeout(update, 15);
+                } else { counter.innerText = text; }
             };
-            const observer = new IntersectionObserver(e => { if(e[0].isIntersecting) { updateCount(); observer.unobserve(counter); } });
-            observer.observe(counter);
+            const obs = new IntersectionObserver(e => { if(e[0].isIntersecting) { update(); obs.unobserve(counter); } });
+            obs.observe(counter);
         });
     </script>
 </body>
