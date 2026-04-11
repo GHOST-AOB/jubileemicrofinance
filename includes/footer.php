@@ -1,117 +1,100 @@
-<footer class="footer">
+<footer class="footer-obsidian">
     <div class="container">
-        <div class="footer-grid">
-            <div class="footer-about">
-                <a href="./" class="footer-logo">
-                    <img src="assets/images/logo-jubilee.png" alt="Jubilee Microfinance">
+        <div class="footer-top-p">
+            <div class="footer-brand-p">
+                <a href="./" class="logo-wrap">
+                    <img src="assets/images/logo-jubilee.png" alt="Jubilee Microfinance" style="filter: brightness(0) invert(1); height: 50px;">
                 </a>
-                <p>Jubilee Microfinance is a leading financial institution dedicated to empowering communities in Northern Uganda through accessible and transparent financial services.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                <p class="mt-4 opacity-75">Establishing the benchmark for institutional-grade microfinance and economic empowerment across Northern Uganda's regional economies.</p>
+                <div class="social-links-p mt-4 d-flex gap-3">
+                    <a href="#" class="text-white opacity-50 hover-opacity-100"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white opacity-50 hover-opacity-100"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-white opacity-50 hover-opacity-100"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white opacity-50 hover-opacity-100"><i class="bi bi-youtube"></i></a>
                 </div>
             </div>
 
-            <div class="footer-links-wrap">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="./">Home</a></li>
-                    <li><a href="about-us.php">About Us</a></li>
-                    <li><a href="services.php">Our Services</a></li>
-                    <li><a href="branches.php">Branch Locator</a></li>
-                    <li><a href="apply.php">Apply for Loan</a></li>
+            <div class="footer-links-col">
+                <h5 class="mb-4 font-weight-bold">Ecosystems</h5>
+                <ul class="list-unstyled opacity-75">
+                    <li class="mb-2"><a href="agri-finance.php" class="text-white">Agricultural Value-Chain</a></li>
+                    <li class="mb-2"><a href="sme-capital.php" class="text-white">SME Capital Hub</a></li>
+                    <li class="mb-2"><a href="innovation-loans.php" class="text-white">Innovation & Tech</a></li>
+                    <li class="mb-2"><a href="group-empowerment.php" class="text-white">Group Empowerment</a></li>
                 </ul>
             </div>
 
-            <div class="footer-links-wrap">
-                <h3 class="footer-title">Services</h3>
-                <ul class="footer-links">
-                    <li><a href="agricultural-loans.php">Agricultural Loans</a></li>
-                    <li><a href="business-loans.php">Business Loans</a></li>
-                    <li><a href="personal-loans.php">Personal Loans</a></li>
-                    <li><a href="group-loans.php">Group Lending</a></li>
-                    <li><a href="savings.php">Savings Accounts</a></li>
+            <div class="footer-links-col">
+                <h5 class="mb-4 font-weight-bold">Institutional</h5>
+                <ul class="list-unstyled opacity-75">
+                    <li class="mb-2"><a href="governance.php" class="text-white">Governance & Trust</a></li>
+                    <li class="mb-2"><a href="impact-metrics.php" class="text-white">Impact Performance</a></li>
+                    <li class="mb-2"><a href="careers.php" class="text-white">Executive Careers</a></li>
+                    <li class="mb-2"><a href="news.php" class="text-white">Press & Media</a></li>
                 </ul>
             </div>
 
-            <div class="footer-contact-wrap">
-                <h3 class="footer-title">Contact Us</h3>
-                <ul class="footer-contact">
-                    <li>
-                        <i class="bi bi-geo-alt text-secondary"></i>
-                        <span>2nd Floor, City House, Arua, Uganda</span>
-                    </li>
-                    <li>
-                        <i class="bi bi-telephone text-secondary"></i>
-                        <span>+256 709 300 099 <br> +256 779 676 584</span>
-                    </li>
-                    <li>
-                        <i class="bi bi-envelope text-secondary"></i>
-                        <span>info@jubileemicrofinance.com</span>
-                    </li>
+            <div class="footer-contact-col">
+                <h5 class="mb-4 font-weight-bold">Regional Hubs</h5>
+                <ul class="list-unstyled opacity-75">
+                    <li class="mb-2 d-flex gap-2"><i class="bi bi-geo-alt text-secondary"></i> <span>HQ: Arua City House, 2nd Floor</span></li>
+                    <li class="mb-2 d-flex gap-2"><i class="bi bi-telephone text-secondary"></i> <span>+256 709 300 099</span></li>
+                    <li class="mb-2 d-flex gap-2"><i class="bi bi-envelope text-secondary"></i> <span>ops@jubileemicrofinance.com</span></li>
                 </ul>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; <?= date('Y'); ?> Jubilee Microfinance. All Rights Reserved. | Designed by <a href="https://www.lwegatech.com" class="text-white">LWEGATECH</a></p>
+        <div class="footer-legal-bar">
+            <div class="copy-p">
+                &copy; <?= date('Y'); ?> Jubilee Microfinance. Registered Financial Institution. 
+            </div>
+            <div class="legal-links d-flex gap-4">
+                <a href="privacy.php" class="text-white opacity-50">Privacy Policy</a>
+                <a href="terms.php" class="text-white opacity-50">Terms of Capital</a>
+                <a href="https://www.lwegatech.com" class="text-white opacity-50">Digital by LWEGATECH</a>
+            </div>
         </div>
     </div>
 </footer>
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="backToTop">
-    <i class="bi bi-arrow-up-short"></i>
+<a href="#" class="back-to-top-p" id="backToTop">
+    <i class="bi bi-chevron-up"></i>
 </a>
 
-<!-- Styles for Back to Top -->
 <style>
-.back-to-top {
+.back-to-top-p {
     position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 30px;
     bottom: 30px;
-    z-index: 996;
-    background: #27ae60; /* Secondary green */
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    transition: all 0.4s;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--secondary);
     color: white;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    z-index: 1000;
 }
-.back-to-top.active {
-    visibility: visible;
+.back-to-top-p.active {
     opacity: 1;
+    visibility: visible;
 }
-.back-to-top i {
-    font-size: 24px;
-}
-.back-to-top:hover {
-    background: #003262; /* Primary blue */
-    transform: translateY(-5px);
-}
+.hover-opacity-100:hover { opacity: 1 !important; }
 </style>
 
-<!-- Scripts -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/aos/aos.js"></script>
-
 <script>
-    // Initialize AOS
-    AOS.init({
-        duration: 1000,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false
-    });
-
-    // Back to top button
+    AOS.init({ duration: 1000, once: true });
+    
+    // Back to top logic
     const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
+        if (window.scrollY > 400) {
             backToTop.classList.add('active');
         } else {
             backToTop.classList.remove('active');
@@ -123,12 +106,39 @@
         const preloader = document.getElementById('preloader');
         if (preloader) {
             preloader.style.opacity = '0';
-            setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 500);
+            setTimeout(() => { preloader.style.display = 'none'; }, 500);
         }
     });
-</script>
 
+    // Counter Logic for multiple metrics
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.innerText.replace(/[^0-9.]/g, '');
+            const count = +counter.getAttribute('data-current') || 0;
+            const inc = target / 100;
+
+            if (count < target) {
+                const next = count + inc;
+                counter.setAttribute('data-current', next);
+                counter.innerText = (target % 1 === 0 ? Math.ceil(next) : next.toFixed(1)) + 
+                                   (counter.innerText.includes('+') ? '+' : '') + 
+                                   (counter.innerText.includes('%') ? '%' : '') + 
+                                   (counter.innerText.includes('B') ? 'B' : '');
+                setTimeout(updateCount, 10);
+            } else {
+                // Keep original text
+            }
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            if(entries[0].isIntersecting) {
+                updateCount();
+                observer.unobserve(counter);
+            }
+        });
+        observer.observe(counter);
+    });
+</script>
 </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Metrics | Regional Economic Performance | Jubilee Microfinance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .navbar-minimal { background: #0a192f; padding: 1rem 0; }
+        .page-hero { padding: 160px 0 100px; background: #0a192f; }
+        .impact-card { background: white; border-radius: 24px; padding: 3rem; box-shadow: 0 4px 30px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+    <header class="navbar-minimal"><div class="container d-flex justify-content-between align-items-center"><a href="index.html"><img src="assets/images/logo-jubilee.png" height="50" style="filter: brightness(0) invert(1);"></a><div class="nav-links-p d-none d-lg-flex"><a href="index.html" class="nav-item-p text-white">Home</a><a href="about-us.html" class="nav-item-p text-white">Who We Are</a><a href="impact.html" class="nav-item-p active text-white">Impact</a><a href="contact.html" class="btn-premium btn-p-primary btn-sm ms-4">Join Hub</a></div></div></header>
+
+    <main>
+        <section class="page-hero text-white">
+            <div class="container" data-aos="fade-up">
+                <span class="text-secondary fw-bold text-uppercase">Performance Report</span>
+                <h1 class="display-3 fw-bold mt-3">Regional Economic <br> <span class="text-secondary">Impact.</span></h1>
+                <p class="lead opacity-75 mt-4" style="max-width: 600px;">Measuring our track record of household stability, business growth, and capital deployment across Northern Uganda.</p>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container py-5">
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6" data-aos="zoom-in"><div class="impact-card h-100 text-center">
+                        <h2 class="counter display-4 font-weight-bold text-primary">125B+</h2>
+                        <p class="h5 fw-bold text-secondary mb-3">Total Economic Value (UGX)</p>
+                        <p class="small text-muted mb-0">Total capital recycled into the regional economy since 2012.</p>
+                    </div></div>
+                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200"><div class="impact-card h-100 text-center">
+                        <h2 class="counter display-4 font-weight-bold text-primary">45,000</h2>
+                        <p class="h5 fw-bold text-secondary mb-3">Unique Disposals Made</p>
+                        <p class="small text-muted mb-0">Direct individual and group financial transactions processed.</p>
+                    </div></div>
+                </div>
+
+                <div class="impact-card bg-primary text-white p-5 mt-5" data-aos="fade-up">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h2 class="fw-bold">98.2% Repayment Success Rate</h2>
+                            <p class="lead opacity-75 mt-3">A testament to our specialized client-relationship model and community-led due diligence across West Nile, Gulu, Soroti, and Lira.</p>
+                        </div>
+                        <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                            <h1 class="display-1 fw-bold text-secondary">A+</h1>
+                            <p class="small opacity-75">Internal Governance Grade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-obsidian py-4"><div class="container text-center text-white opacity-50 small">&copy; 2026 Jubilee Microfinance.</div></footer>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script>
+        AOS.init();
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const text = counter.innerText;
+                const target = parseFloat(text.replace(/[^0-9.]/g, ''));
+                const count = parseFloat(counter.getAttribute('data-count') || 0);
+                const inc = target / 100;
+                if (count < target) {
+                    const next = count + inc;
+                    counter.setAttribute('data-count', next);
+                    counter.innerText = (target % 1 === 0 ? Math.ceil(next) : next.toFixed(1)) + (text.includes('B') ? 'B+' : (text.includes('%') ? '%' : ''));
+                    setTimeout(updateCount, 15);
+                } else { counter.innerText = text; }
+            };
+            const obs = new IntersectionObserver((e) => { if(e[0].isIntersecting) { updateCount(); obs.unobserve(counter); } });
+            obs.observe(counter);
+        });
+    </script>
+</body>
+</html>

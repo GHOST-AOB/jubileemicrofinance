@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecosystems | Precision Financing | Jubilee Microfinance</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <!-- Design System -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .navbar-minimal { background: #0a192f; padding: 1rem 0; }
+        .page-hero { padding: 160px 0 80px; background: #0a192f; }
+        .mobile-nav-panel { position: fixed; top: 0; right: -100%; width: 85%; height: 100vh; background: #0a192f; z-index: 9999; transition: 0.5s; }
+        .mobile-nav-panel.active { right: 0; }
+        .nav-link-m { font-size: 1.5rem; font-weight: 700; color: white; display: block; margin: 20px 40px; }
+    </style>
+</head>
+<body>
+    <header class="navbar-minimal">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html"><img src="assets/images/logo-jubilee.png" height="50" style="filter: brightness(0) invert(1);"></a>
+            <div class="nav-links-p d-none d-lg-flex">
+                <a href="index.html" class="nav-item-p text-white">Home</a>
+                <a href="about-us.html" class="nav-item-p text-white">Who We Are</a>
+                <a href="ecosystems.html" class="nav-item-p active text-white">Ecosystems</a>
+                <a href="impact.html" class="nav-item-p text-white">Impact</a>
+                <a href="contact.html" class="btn-premium btn-p-primary btn-sm ms-4">Join Hub</a>
+            </div>
+            <button class="menu-toggle-p d-lg-none" id="mobileNavToggle"><i class="bi bi-grid-3x3-gap-fill text-white"></i></button>
+        </div>
+    </header>
+
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <button class="btn btn-dark m-4" id="closeMobileNav"><i class="bi bi-x-lg"></i></button>
+        <nav><a href="index.html" class="nav-link-m">Home</a><a href="about-us.html" class="nav-link-m">Who We Are</a></nav>
+    </div>
+
+    <main>
+        <section class="page-hero">
+            <div class="container text-white" data-aos="fade-up">
+                <span class="text-secondary fw-bold text-uppercase">Precision Financing</span>
+                <h1 class="display-3 fw-bold mt-3">Sector-Specific <br> <span class="text-secondary">Ecosystems.</span></h1>
+                <p class="lead opacity-75 mt-4" style="max-width: 600px;">Designing capital engines that speak the language of Agriculture, SME, and Community groups.</p>
+            </div>
+        </section>
+
+        <section class="py-5 bg-white">
+            <div class="container py-5">
+                <!-- Agri -->
+                <div class="row align-items-center gy-5 mb-5">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <h2 class="display-5 fw-bold text-primary">Agricultural Ecosystem</h2>
+                        <p class="lead text-muted mt-3">From soil to market. A cyclic lending model matched to the Ugandan seasonal harvest windows. We provide input advances, equipment financing, and market linkage capital.</p>
+                        <div class="row mt-4 g-3">
+                            <div class="col-sm-6"><div class="p-3 bg-light rounded-4"><h4>Low-Friction</h4><p class="small text-muted mb-0">Minimal documentation setup.</p></div></div>
+                            <div class="col-sm-6"><div class="p-3 bg-light rounded-4"><h4>Seasonal Sync</h4><p class="small text-muted mb-0">Repayment matched to harvest.</p></div></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left"><img src="assets/images/Agriculture.jpg" class="img-fluid rounded-4 shadow"></div>
+                </div>
+
+                <!-- SME -->
+                <div class="row align-items-center gy-5 py-5 flex-lg-row-reverse">
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <h2 class="display-5 fw-bold text-primary">SME Capital Hub</h2>
+                        <p class="lead text-muted mt-3">Strategic capital for commercial acceleration. We support local wholesalers, traders, and small industries with rapid inventory funding and premise expansion loans.</p>
+                        <div class="row mt-4 g-3">
+                            <div class="col-sm-6"><div class="p-3 bg-light rounded-4"><h4>Growth Path</h4><p class="small text-muted mb-0">Operational scaling support.</p></div></div>
+                            <div class="col-sm-6"><div class="p-3 bg-light rounded-4"><h4>Digital Tools</h4><p class="small text-muted mb-0">Integrated merchant solutions.</p></div></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-right"><img src="assets/images/pexels-energepic-com-27411-2988232.jpg" class="img-fluid rounded-4 shadow"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-obsidian py-4"><div class="container text-center text-white opacity-50 small">&copy; 2026 Jubilee Microfinance. Registered Institution.</div></footer>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script>
+        AOS.init();
+        const mToggle = document.getElementById('mobileNavToggle');
+        const mPanel = document.getElementById('mobileNavPanel');
+        const mClose = document.getElementById('closeMobileNav');
+        mToggle.addEventListener('click', () => mPanel.classList.add('active'));
+        mClose.addEventListener('click', () => mPanel.classList.remove('active'));
+    </script>
+</body>
+</html>
