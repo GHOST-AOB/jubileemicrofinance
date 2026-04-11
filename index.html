@@ -19,11 +19,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
     
     <style>
-        /* Modern Scroll & Nav */
+        /* Smooth Scrolling & Section Jumps */
         html { scroll-behavior: smooth; }
-        .navbar-minimal { padding: 1.5rem 0; background: transparent; transition: 0.5s; }
-        .navbar-minimal.scrolled { background: rgba(0, 26, 51, 0.95); backdrop-filter: blur(20px); padding: 1rem 0; }
-        
         .section-jump { padding-top: 100px; margin-top: -100px; }
         .bg-gradient-blue-green { background: linear-gradient(135deg, #001a33 0%, #10b981 100%); }
     </style>
@@ -36,32 +33,40 @@
     </div>
 
     <!-- Navigation -->
-    <header class="navbar-minimal fixed-top" id="mainNav">
+    <header class="navbar-minimal" id="mainNav">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="#top" class="logo-wrap">
                 <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 55px; filter: brightness(0) invert(1);">
             </a>
+            
             <div class="nav-links-p d-none d-lg-flex">
-                <a href="#top" class="nav-item-p text-white">Home</a>
-                <a href="#about" class="nav-item-p text-white">Trust Pillars</a>
-                <a href="#ecosystems" class="nav-item-p text-white">Ecosystems</a>
-                <a href="#impact" class="nav-item-p text-white">Impact</a>
-                <a href="#branches" class="nav-item-p text-white">Hubs</a>
+                <a href="#top" class="nav-item-p">Home</a>
+                <a href="#about" class="nav-item-p">Trust Pillars</a>
+                <a href="#ecosystems" class="nav-item-p">Ecosystems</a>
+                <a href="#impact" class="nav-item-p">Impact</a>
+                <a href="#branches" class="nav-item-p">Hubs</a>
                 <a href="#contact" class="btn btn-emerald btn-sm ms-4">Join Hub</a>
             </div>
-            <button class="btn btn-link text-white d-lg-none" id="mobileNavToggle"><i class="bi bi-grid-3x3-gap-fill fs-2"></i></button>
+
+            <button class="menu-toggle-p d-lg-none" id="mobileNavToggle">
+                <i class="bi bi-grid-3x3-gap-fill"></i>
+            </button>
         </div>
     </header>
 
-    <!-- Mobile Nav -->
-    <div class="mobile-nav-panel" id="mobileNavPanel" style="position: fixed; top: 0; right: -100%; width: 85%; height: 100vh; background: #001a33; z-index: 9999; transition: 0.5s; padding: 40px;">
-        <button class="btn btn-link text-white position-absolute" id="closeMobileNav" style="top: 30px; right: 30px;"><i class="bi bi-x-lg fs-2"></i></button>
-        <div class="mb-5"><img src="assets/images/logo-jubilee.png" height="40" style="background: white; border-radius: 5px; padding: 5px;"></div>
-        <nav class="d-flex flex-column gap-4">
-            <a href="#top" class="h3 font-weight-bold text-white nav-link-m">Home</a>
-            <a href="#about" class="h3 font-weight-bold text-white nav-link-m">Trust Pillars</a>
-            <a href="#ecosystems" class="h3 font-weight-bold text-white nav-link-m">Ecosystems</a>
-            <a href="#contact" class="btn btn-emerald w-100 p-3">Join Now</a>
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel shadow-lg" id="mobileNavPanel">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+             <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 40px; background: white; border-radius: 5px; padding: 5px;">
+             <button class="btn btn-link text-white p-0" id="closeMobileNav"><i class="bi bi-x-lg fs-2"></i></button>
+        </div>
+        <nav class="d-flex flex-column">
+            <a href="#top" class="nav-link-m">Home</a>
+            <a href="#about" class="nav-link-m">Trust Pillars</a>
+            <a href="#ecosystems" class="nav-link-m">Ecosystems</a>
+            <a href="#impact" class="nav-link-m">Impact</a>
+            <a href="#branches" class="nav-link-m">Regional Hubs</a>
+            <a href="#contact" class="btn btn-emerald w-100 p-3 mt-4 justify-content-center d-flex align-items-center">Join the Network <i class="bi bi-arrow-right-short ms-2 fs-4"></i></a>
         </nav>
     </div>
 
