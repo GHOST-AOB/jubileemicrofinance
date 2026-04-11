@@ -51,7 +51,7 @@
             <div class="legal-links d-flex gap-4">
                 <a href="privacy.php" class="text-white opacity-50">Privacy Policy</a>
                 <a href="terms.php" class="text-white opacity-50">Terms of Capital</a>
-                <a href="https://www.lwegatech.com" class="text-white opacity-50">Digital by LWEGATECH</a>
+                <a href="#" class="text-white opacity-50">Digital by SpiderwebUG</a>
             </div>
         </div>
     </div>
