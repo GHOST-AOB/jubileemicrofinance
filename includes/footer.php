@@ -1,84 +1,134 @@
-
-  <div class="footer">
+<footer class="footer">
     <div class="container">
-      <div class="row">
-        <div class="col-md-5 mb-3 footer-contacts">
-          <h4>Quick Contacts</h4>
-          <ul>
-            <li><i class="bi bi-house-door me-2"></i> 2nd Floor, Nakawa House, UAP Business Park
-            </li>
-            <li><i class="bi bi-phone me-2"></i> +256 709 300 099 / 779 676 584</li>
-            <li><i class="bi bi-envelope me-2"></i> info@pedalbusinesssolution.com</li>
-            <li><i class="bi bi-globe-europe-africa me-2"></i> www.pedalbusinesssolution.com</li>
-          </ul>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="./" class="footer-logo">
+                    <img src="assets/images/logo-jubilee.png" alt="Jubilee Microfinance">
+                </a>
+                <p>Jubilee Microfinance is a leading financial institution dedicated to empowering communities in Northern Uganda through accessible and transparent financial services.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-wrap">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="about-us.php">About Us</a></li>
+                    <li><a href="services.php">Our Services</a></li>
+                    <li><a href="branches.php">Branch Locator</a></li>
+                    <li><a href="apply.php">Apply for Loan</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-wrap">
+                <h3 class="footer-title">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="agricultural-loans.php">Agricultural Loans</a></li>
+                    <li><a href="business-loans.php">Business Loans</a></li>
+                    <li><a href="personal-loans.php">Personal Loans</a></li>
+                    <li><a href="group-loans.php">Group Lending</a></li>
+                    <li><a href="savings.php">Savings Accounts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-wrap">
+                <h3 class="footer-title">Contact Us</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="bi bi-geo-alt text-secondary"></i>
+                        <span>2nd Floor, City House, Arua, Uganda</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-telephone text-secondary"></i>
+                        <span>+256 709 300 099 <br> +256 779 676 584</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-envelope text-secondary"></i>
+                        <span>info@jubileemicrofinance.com</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col-md-3 mb-3 footer-links">
-          <h4>Human Resource</h4>
-          <ul>
-            <li><a href="recruitment-and-staffing">Recruitment & Staffing</a></li>
-            <li><a href="hr-consulting">HR Consulting</a></li>
-            <li><a href="training-and-development">Training and Development</a></li>
-            <li><a href="payroll-management">Payroll and Benefits </a></li>
-            <li><a href="casual-labor-management">Casual Labor Management</a></li>
-            <li><a href="financial-services">Financial Services</a></li>
-            <li><a href="cleaning-services">Professional Cleaning </a></li>
-          </ul>
+
+        <div class="footer-bottom">
+            <p>&copy; <?= date('Y'); ?> Jubilee Microfinance. All Rights Reserved. | Designed by <a href="https://www.lwegatech.com" class="text-white">LWEGATECH</a></p>
         </div>
-        <div class="col-md-4 mb-3 footer-links">
-          <h4>Product Supply</h4>
-          <ul>
-            <li><a href="personal-protective-equipment-gear-ppe">Personal Protective Equipment/Gear (PPE)</a></li>
-            <li><a href="relief-items">Relief Items</a></li>
-            <li><a href="medical-sundries">Medical Sundries</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col copyright text-center">
-        <span class="me-2">&copy;<?= date('Y');?> Pedal Business Solution. All Rights Reserved. </span>
-        Designed: <a href="https://www.lwegatech.com" target="_blank">Lwegatech</a>
-        </div>
-      </div>
     </div>
-  </div>
-    <a href="#" class="back-to-top d-flex text-center"><i class="bi bi-chevron-up"></i></a>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/slides.js"></script>
-    <!-- initialize scroll effect !-->        
-    <script>
-            AOS.init({
-            duration: 1000,
-            easing: "ease-in-out",
-            once: true,
-            mirror: false
-            });
-    </script>
-        <script>
-    (function (w, d, s, u) {
-    w.gbwawc = {
-    url: u,
-    options: {
-            waId: "+256772890000",
-            siteName: "PEDAL Business",
-            siteTag: "We make it  a Point",
-            siteLogo: "https://www.pedalbusinesssolution.com/pedal-favicon.png",
-            widgetPosition: "LEFT",
-            triggerMessage: "Chat with Us!",
-            welcomeMessage: "How can I help you?",
-            brandColor: "#25D366",
-            messageText: "",
-            replyOptions: ['',''],
-        },
-    };
-    var h = d.getElementsByTagName(s)[0],
-    j = d.createElement(s);
-    j.async = true;
-    j.src = u + "/whatsapp-widget.min.js?_=" + Math.random();
-    h.parentNode.insertBefore(j, h);
-    })(window, document, "script", "https://waw.gallabox.com");
-    </script> 
-    <script>end_load()</script>
-  </body>
+</footer>
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="backToTop">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<!-- Styles for Back to Top -->
+<style>
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 30px;
+    bottom: 30px;
+    z-index: 996;
+    background: #27ae60; /* Secondary green */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+.back-to-top i {
+    font-size: 24px;
+}
+.back-to-top:hover {
+    background: #003262; /* Primary blue */
+    transform: translateY(-5px);
+}
+</style>
+
+<!-- Scripts -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add('active');
+        } else {
+            backToTop.classList.remove('active');
+        }
+    });
+
+    // Remove preloader
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        }
+    });
+</script>
+
+</body>
 </html>

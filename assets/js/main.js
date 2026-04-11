@@ -1,68 +1,113 @@
-/** ============================================================
- *  JS File for Kipya Template
- *===============================================================*/
-//Sticky Top
+/** 
+ * Jubilee Microfinance - Main JS
+ * Modern, non-blocking vanilla JS for interactions
+ */
+
 document.addEventListener("DOMContentLoaded", function() {
-  var header = document.querySelector('.menu-section');
-  
-  window.addEventListener('scroll', function() {
-      if (window.scrollY > 200) {
-          header.classList.add('sticky-header');
-      } else {
-          header.classList.remove('sticky-header');
-      }
-  });
-});
-
-
-
- 
-
-  
-
-/** ===============================================
- * Back to Top
- *=================================================*/
-function select(selector) {
-    return document.querySelector(selector);
-}
-
-// Check if the back-to-top element exists
-var backtotop = select('.back-to-top');
-if (backtotop) {
-    const toggleBacktotop = () => {
-        if (window.scrollY > 200) { // Change threshold to 200
-            backtotop.classList.add('active');
-        } else {
-            backtotop.classList.remove('active');
-        }
-    };
-
-    window.addEventListener('load', toggleBacktotop);
-    window.addEventListener('scroll', toggleBacktotop);
     
-    // Scroll to top on click
-    backtotop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Smooth scroll to top
+    // Sticky Navbar logic
+    const navbar = document.querySelector('.navbar-custom');
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         });
-    });
-}
+    }
 
-/** ====================================================
- * Accordion
- *=========================================================*/
-document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Navbar Toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('bi-list', 'bi-x');
+            } else {
+                icon.classList.replace('bi-x', 'bi-list');
+            }
+        });
+    }
+
+    // Counter Animation for Stats
+    function animateCounters() {
+        const counters = document.querySelectorAll('.counter');
+        
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const targetText = counter.innerText;
+                const hasPlus = targetText.includes('+');
+                const hasB = targetText.includes('B');
+                const hasPercent = targetText.includes('%');
+                
+                const target = parseFloat(targetText.replace(/[^0-9.]/g, ''));
+                const countAttr = parseFloat(counter.getAttribute('data-count') || 0);
+                
+                const speed = 200;
+                const inc = target / speed;
+
+                if (countAttr < target) {
+                    const nextCount = countAttr + inc;
+                    counter.setAttribute('data-count', nextCount);
+                    
+                    let displayValue = Math.ceil(nextCount);
+                    if (hasB) displayValue += 'B';
+                    if (hasPlus) displayValue += '+';
+                    if (hasPercent) displayValue += '%';
+                    
+                    counter.innerText = displayValue;
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = targetText;
+                }
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                if(entries[0].isIntersecting) {
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            }, { threshold: 0.5 });
+            
+            observer.observe(counter);
+        });
+    }
+    animateCounters();
+
+    // Accordion Logic (Restored)
     const accordionTitles = document.querySelectorAll('.accordion-title');
-
     accordionTitles.forEach(title => {
         title.addEventListener('click', () => {
             const content = title.nextElementSibling;
-            if (content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'block';
-            } else {
-                content.style.display = 'none';
+            if (content) {
+                const isOpen = content.style.maxHeight;
+                if (isOpen) {
+                    content.style.maxHeight = null;
+                    title.classList.remove('active');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    title.classList.add('active');
+                }
+            }
+        });
+    });
+
+    // Smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: targetElement.offsetTop - 85,
+                    behavior: 'smooth'
+                });
             }
         });
     });
