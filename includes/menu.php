@@ -1,84 +1,53 @@
 <header class="navbar-minimal" id="mainNav">
     <div class="container d-flex justify-content-between align-items-center">
         <a href="./" class="logo-wrap">
-            <img src="assets/images/logo-jubilee.png" alt="Jubilee Microfinance">
+            <img src="assets/images/logo-jubilee.png" alt="Jubilee Microfinance" style="height: 48px; filter: brightness(0) invert(1);">
         </a>
         
         <div class="nav-links-p d-none d-lg-flex">
-            <a href="./" class="nav-item-p active">Home</a>
-            <a href="about-us.php" class="nav-item-p">Who We Are</a>
-            <a href="ecosystem.php" class="nav-item-p">Ecosystems</a>
-            <a href="impact.php" class="nav-item-p">Impact</a>
-            <a href="branches.php" class="nav-item-p">Branches</a>
-            <a href="contact.php" class="btn-premium btn-p-primary btn-sm">Join the Network</a>
+            <a href="./" class="nav-item-p">Home</a>
+            <a href="about-us.php" class="nav-item-p">About Us</a>
+            <a href="ecosystems.php" class="nav-item-p">Loan Products</a>
+            <a href="branches.php" class="nav-item-p">Our Hubs</a>
+            <a href="contact.php" class="btn btn-emerald btn-sm ms-4">Apply Now</a>
         </div>
 
-        <button class="menu-toggle-p d-lg-none" id="mobileNavToggle">
-            <i class="bi bi-grid-3x3-gap-fill"></i>
+        <button class="menu-toggle-p d-lg-none" id="mobileNavToggle" aria-label="Toggle Mobile Menu">
+            <i class="bi bi-list fs-1 text-white"></i>
         </button>
     </div>
 </header>
 
-<div class="mobile-nav-panel" id="mobileNavPanel">
-    <div class="container py-5">
-        <div class="d-flex justify-content-between align-items-center mb-5">
-            <img src="assets/images/logo-jubilee.png" height="40" alt="Logo">
-            <button class="btn-close-p" id="closeMobileNav"><i class="bi bi-x-lg"></i></button>
-        </div>
-        <nav class="d-flex flex-column gap-4">
-            <a href="./" class="h3 font-weight-bold text-primary">Home</a>
-            <a href="about-us.php" class="h3 font-weight-bold text-primary">Who We Are</a>
-            <a href="ecosystem.php" class="h3 font-weight-bold text-primary">Ecosystems</a>
-            <a href="impact.php" class="h3 font-weight-bold text-primary">Impact Report</a>
-            <hr>
-            <a href="apply.php" class="btn-premium btn-p-primary w-100 justify-content-center">Apply Now</a>
-        </nav>
+<!-- Mobile Navigation Panel -->
+<div class="mobile-nav-panel shadow-lg" id="mobileNavPanel">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+         <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 40px; background: white; border-radius: 5px; padding: 5px;">
+         <button class="btn btn-link text-white p-0" id="closeMobileNav"><i class="bi bi-x-lg fs-2"></i></button>
     </div>
+    <nav class="d-flex flex-column">
+        <a href="./" class="nav-link-m">Home</a>
+        <a href="about-us.php" class="nav-link-m">About Us</a>
+        <a href="ecosystems.php" class="nav-link-m">Loan Products</a>
+        <a href="branches.php" class="nav-link-m">Regional Hubs</a>
+        <a href="contact.php" class="btn btn-emerald w-100 p-3 mt-4">Apply Today</a>
+    </nav>
 </div>
 
-<style>
-/* Internal styles for menu components during transition */
-.menu-toggle-p { background: none; border: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
-.btn-close-p { background: none; border: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
-.mobile-nav-panel {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background: white;
-    z-index: 3000;
-    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.mobile-nav-panel.active { right: 0; }
-</style>
-
 <script>
-    // Navbar scroll interaction
-    const mainNav = document.getElementById('mainNav');
+    // Navigation Logic
+    const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            mainNav.classList.add('scrolled');
-        } else {
-            mainNav.classList.remove('scrolled');
-        }
+        if (window.scrollY > 80) { nav.classList.add('scrolled'); }
+        else { nav.classList.remove('scrolled'); }
     });
 
-    // Mobile Navigation logic
-    const mobileNavToggle = document.getElementById('mobileNavToggle');
-    const closeMobileNav = document.getElementById('closeMobileNav');
-    const mobileNavPanel = document.getElementById('mobileNavPanel');
-
-    if (mobileNavToggle) {
-        mobileNavToggle.addEventListener('click', () => {
-            mobileNavPanel.classList.add('active');
-        });
-    }
-
-    if (closeMobileNav) {
-        closeMobileNav.addEventListener('click', () => {
-            mobileNavPanel.classList.remove('active');
-        });
+    // Mobile Menu
+    const mToggle = document.getElementById('mobileNavToggle');
+    const mClose = document.getElementById('closeMobileNav');
+    const mPanel = document.getElementById('mobileNavPanel');
+    if(mToggle && mPanel) {
+        mToggle.addEventListener('click', () => mPanel.style.right = '0');
+        mClose.addEventListener('click', () => mPanel.style.right = '-100%');
+        document.querySelectorAll('.nav-link-m').forEach(l => l.addEventListener('click', () => mPanel.style.right = '-100%'));
     }
 </script>
-

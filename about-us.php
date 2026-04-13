@@ -1,58 +1,88 @@
 <?php
-$title = "Institutional Trust & Governance | Jubilee Microfinance";
-$tagline = "Stability you can build on.";
-$description = "Learn about the mission, governance, and institutional pillars that make Jubilee Microfinance Northern Uganda's most trusted partner.";
-$keywords = "jubilee microfinance history, microfinance governance, financial stability arua, gulu banking leadership";
+$title = "Our Story & Governance | Jubilee Microfinance";
+$description = "Learn about our mission to empower Ugandan communities through institutional-grade microfinance and transparent governance.";
+$keywords = "jubilee microfinance history, microfinance governance Uganda, financial inclusion mission";
 $featured_image = 'assets/images/pexels-moh-dikko-photography-2151327861-33023725.jpg';
+
 include "includes/header.php";
 include "includes/menu.php";
 ?>
 
-<main class="page-content">
-    <section class="page-hero" style="background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.8)), url('assets/images/pexels-artempodrez-5716034.jpg') center/cover;">
-        <div class="container text-white py-5 mt-5">
-            <h1 class="display-3 font-weight-bold">Who We <span class="text-secondary">Are.</span></h1>
-            <p class="lead opacity-75 max-width-600">Forging an elite path for financial inclusion and high-impact economic growth across Northern Uganda's regional markets since 2012.</p>
+<main>
+    <!-- Page Hero -->
+    <section class="section-padding bg-primary-deep text-white" style="padding-top: 15vw;">
+        <div class="container" data-aos="fade-up">
+            <span class="text-emerald fw-bold text-uppercase letter-spacing-1">Establishment & Mission</span>
+            <h1 class="display-3 fw-bold mt-3">Governance-Led <br> <span class="text-emerald">Financial Excellence.</span></h1>
+            <p class="lead opacity-75 mt-4" style="max-width: 600px;">Since 2012, Jubilee Microfinance has been at the forefront of Northern Uganda's economic transformation, delivering capital with precision and integrity.</p>
         </div>
     </section>
 
-    <section class="about-story py-5">
+    <!-- Mission & Pillars -->
+    <section class="section-padding bg-white">
         <div class="container">
-            <div class="grid-complex">
-                <div class="story-content" data-aos="fade-right">
-                    <h2 class="section-title mb-4">Our Institutional Pillars</h2>
-                    <p>Jubilee Microfinance is more than a lending agency; we are a financial architect. Our core focus lies in identifying high-growth potential within agricultural value-chains and SME clusters, and deploying institutional-quality capital to catalyze growth.</p>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="assets/images/pexels-moh-dikko-photography-2151327861-33023725.jpg" class="img-fluid rounded-4 shadow-lg" alt="Our Impact">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="display-5 fw-bold text-primary-deep mb-4">Our Institutional Pillars</h2>
+                    <p class="text-muted mb-5">At Jubilee, we don't just provide loans; we build lasting financial ecosystems. Our approach is rooted in deep local understanding and global financial standards.</p>
                     
-                    <div class="mission-item-p mt-5">
-                        <h4 class="font-weight-bold text-primary"><i class="bi bi-shield-check text-secondary me-2"></i> Unwavering Trust</h4>
-                        <p class="text-muted">Adopting global best practices in governance to ensure every client's capital and growth trajectory is protected.</p>
+                    <div class="d-flex gap-4 mb-4">
+                        <div class="icon-circle-p flex-shrink-0 m-0" style="width: 60px; height: 60px;"><i class="bi bi-shield-check"></i></div>
+                        <div>
+                            <h4 class="fw-bold mb-2">UMRA Regulated</h4>
+                            <p class="small text-muted mb-0">Full compliance with the Uganda Microfinance Regulatory Authority ensures safety and transparency for all stakeholders.</p>
+                        </div>
                     </div>
 
-                    <div class="mission-item-p mt-4">
-                        <h4 class="font-weight-bold text-primary"><i class="bi bi-graph-up-arrow text-secondary me-2"></i> Regional Scale</h4>
-                        <p class="text-muted">Focused expansion across West Nile, Gulu, Soroti, and Lira to provide unparalleled local access to capital.</p>
+                    <div class="d-flex gap-4 mb-4">
+                        <div class="icon-circle-p flex-shrink-0 m-0" style="width: 60px; height: 60px; background: var(--secondary-emerald);"><i class="bi bi-people"></i></div>
+                        <div>
+                            <h4 class="fw-bold mb-2">Community Focused</h4>
+                            <p class="small text-muted mb-0">Our hubs in Arua, Gulu, and Soroti are staffed by locals who understand the unique challenges of our borrowers.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-4">
+                        <div class="icon-circle-p flex-shrink-0 m-0" style="width: 60px; height: 60px; background: var(--primary-deep);"><i class="bi bi-graph-up"></i></div>
+                        <div>
+                            <h4 class="fw-bold mb-2">Sustainable Growth</h4>
+                            <p class="small text-muted mb-0">We focus on productive lending—fueling businesses and farms that create jobs and improve household stability.</p>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="story-visual" data-aos="fade-left">
-                    <div class="metric-card-p highlighted-metric">
-                        <h2 class="metric-value">13+ Years</h2>
-                        <span class="metric-label">Institutional Stability</span>
-                        <hr>
-                        <p class="small">Continuous operation without capital disruption since our inception.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold text-primary-deep">Leadership & Governance</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">Managed by a diverse board of financial experts and local community leaders committed to ethical financing.</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-5 bg-white rounded-4 shadow-sm h-100">
+                        <div class="h1 text-emerald mb-3"><i class="bi bi-award"></i></div>
+                        <h4 class="fw-bold mb-2">Professionalism</h4>
+                        <p class="small text-muted">A dedicated team of credit analysts ensuring responsible lending practices.</p>
                     </div>
-                    <img src="assets/images/pexels-moh-dikko-photography-2151327861-33023725.jpg" class="mt-4 rounded-lg shadow-lg" alt="Community Growth" style="width: 100%; border-radius: 20px;">
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-5 bg-white rounded-4 shadow-sm h-100">
+                        <div class="h1 text-emerald mb-3"><i class="bi bi-eye"></i></div>
+                        <h4 class="fw-bold mb-2">Transparency</h4>
+                        <p class="small text-muted">Clear terms, no hidden fees, and absolute honesty in all our financial dealings.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 </main>
-
-<style>
-.max-width-600 { max-width: 600px; }
-.highlighted-metric { background: var(--primary); color: white; border: none; }
-.highlighted-metric .metric-label { color: var(--secondary); opacity: 1; }
-.mission-item-p h4 { font-size: 1.25rem; }
-</style>
 
 <?php include "includes/footer.php"; ?>

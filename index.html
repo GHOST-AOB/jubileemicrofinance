@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jubilee Microfinance | Precision Green-Blue Finance Ecosystem</title>
+    <meta name="description" content="Jubilee Microfinance - Providing flexible loan solutions across Uganda. Agricultural, Salary, Business, and Boda Boda loans with fast approval.">
+    <title>Jubilee Microfinance | Empowering Your Growth Across Uganda</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Vendor CSS -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
@@ -19,37 +20,105 @@
     <link rel="stylesheet" href="assets/css/main.css">
     
     <style>
-        /* Smooth Scrolling & Section Jumps */
-        html { scroll-behavior: smooth; }
-        .section-jump { padding-top: 100px; margin-top: -100px; }
-        .bg-gradient-blue-green { background: linear-gradient(135deg, #001a33 0%, #10b981 100%); }
+        :root {
+            --primary-deep: #002b52;
+            --secondary-emerald: #10b981;
+            --touch-target: 48px;
+        }
+
+        /* Responsive Polish */
+        .section-padding { padding: 5rem 0; }
+        @media (max-width: 768px) {
+            .section-padding { padding: 3rem 0; }
+            .display-1 { font-size: 2.5rem; }
+            .display-4 { font-size: 2rem; }
+        }
+
+        /* Accessibility & Mobile Targets */
+        .btn, .nav-link, .form-control, .form-select {
+            min-height: var(--touch-target);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Loan Cards */
+        .product-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            background: #fff;
+            height: 100%;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.1);
+        }
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        /* Step Indicator */
+        .step-item {
+            position: relative;
+            text-align: center;
+        }
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--secondary-emerald);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+        }
+
+        /* FAQ Accordion */
+        .accordion-button:not(.collapsed) {
+            background-color: var(--accent-mint);
+            color: var(--primary-deep);
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: var(--secondary-emerald);
+        }
+
+        /* Preloader Emerald */
+        #preloader .spinner-border { color: var(--secondary-emerald) !important; }
     </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120">
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
 
     <!-- Preloader -->
     <div id="preloader" style="position: fixed; inset: 0; z-index: 10000; background: #001a33; display: flex; align-items: center; justify-content: center; transition: 0.5s;">
-        <div class="spinner-border text-emerald" style="width: 3rem; height: 3rem;"></div>
+        <div class="spinner-border text-white" style="width: 3rem; height: 3rem;"></div>
     </div>
 
     <!-- Navigation -->
     <header class="navbar-minimal" id="mainNav">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="#top" class="logo-wrap">
-                <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 55px; filter: brightness(0) invert(1);">
+                <img src="assets/images/logo-jubilee.png" alt="Jubilee Microfinance" style="height: 48px; filter: brightness(0) invert(1);">
             </a>
             
             <div class="nav-links-p d-none d-lg-flex">
                 <a href="#top" class="nav-item-p">Home</a>
-                <a href="#about" class="nav-item-p">Trust Pillars</a>
-                <a href="#ecosystems" class="nav-item-p">Ecosystems</a>
-                <a href="#impact" class="nav-item-p">Impact</a>
-                <a href="#branches" class="nav-item-p">Hubs</a>
-                <a href="#contact" class="btn btn-emerald btn-sm ms-4">Join Hub</a>
+                <a href="#products" class="nav-item-p">Loan Products</a>
+                <a href="#how-it-works" class="nav-item-p">How to Apply</a>
+                <a href="#testimonials" class="nav-item-p">Success Stories</a>
+                <a href="#contact" class="btn btn-emerald btn-sm ms-4">Apply Now</a>
             </div>
 
-            <button class="menu-toggle-p d-lg-none" id="mobileNavToggle">
-                <i class="bi bi-grid-3x3-gap-fill"></i>
+            <button class="menu-toggle-p d-lg-none" id="mobileNavToggle" aria-label="Toggle Navigation">
+                <i class="bi bi-list fs-1 text-white"></i>
             </button>
         </div>
     </header>
@@ -62,223 +131,344 @@
         </div>
         <nav class="d-flex flex-column">
             <a href="#top" class="nav-link-m">Home</a>
-            <a href="#about" class="nav-link-m">Trust Pillars</a>
-            <a href="#ecosystems" class="nav-link-m">Ecosystems</a>
-            <a href="#impact" class="nav-link-m">Impact</a>
-            <a href="#branches" class="nav-link-m">Regional Hubs</a>
-            <a href="#contact" class="btn btn-emerald w-100 p-3 mt-4 justify-content-center d-flex align-items-center">Join the Network <i class="bi bi-arrow-right-short ms-2 fs-4"></i></a>
+            <a href="#products" class="nav-link-m">Loan Products</a>
+            <a href="#how-it-works" class="nav-link-m">Apply Now</a>
+            <a href="#faq" class="nav-link-m">FAQs</a>
+            <a href="#contact" class="btn btn-emerald w-100 p-3 mt-4">Apply Today <i class="bi bi-arrow-right ms-2"></i></a>
         </nav>
     </div>
 
     <main id="top">
-        <!-- Unique Hero Slider Section -->
+        <!-- Hero Slider -->
         <section class="slider-container-unique">
-            <div class="slide-unique active" style="background-image: url('assets/images/Agriculture.jpg'); background-size: cover; background-position: center;">
-                 <div class="slide-img-overlay" style="background: linear-gradient(90deg, rgba(0, 21, 41, 0.95) 30%, rgba(16, 185, 129, 0.1) 100%);"></div>
+            <div class="slide-unique active" style="background-image: url('assets/images/pexels-kaypics-28112436.jpg'); background-size: cover; background-position: center;">
+                 <div class="slide-img-overlay"></div>
                  <div class="container slide-content-unique text-white" data-aos="fade-right">
-                    <span class="badge bg-emerald text-white mb-4 px-3 py-2 shadow-sm">High-Growth Financing</span>
-                    <h1 class="display-1 fw-bold text-white mb-3" style="text-shadow: 0 4px 10px rgba(0,0,0,0.3);">Capitalize On <br><span style="color: #10b981;">Opportunity.</span></h1>
-                    <p class="lead opacity-75 mb-5" style="max-width: 600px; text-shadow: 0 2px 5px rgba(0,0,0,0.5);">Deploying institutional-grade capital across Northern Uganda's most promising sectors since 2012.</p>
-                    <div class="d-flex flex-wrap gap-4">
-                        <a href="#contact" class="btn btn-emerald btn-lg h4 mb-0">Apply for Deployment</a>
-                        <a href="#impact" class="btn btn-blue-outline btn-lg h4 mb-0 border-white text-white">Impact Performance</a>
+                    <span class="badge bg-emerald text-white mb-3 px-3 py-2 shadow-sm">UMRA Licensed Institution</span>
+                    <h1 class="display-1 fw-bold text-white mb-3">Sente mangu.<br><span style="color: #10b981;">Growth now.</span></h1>
+                    <p class="lead opacity-75 mb-5" style="max-width: 600px;">Access fast, flexible, and affordable financial solutions designed for the Ugandan market. From Agriculture to Business, we fuel your dreams.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn btn-emerald btn-lg px-4 fs-5">Get a Loan Today</a>
+                        <a href="#products" class="btn btn-outline-light btn-lg px-4 fs-5">View Our Loans</a>
                     </div>
                  </div>
             </div>
-            <!-- Slide 2 -->
-            <div class="slide-unique" style="background-image: url('assets/images/pexels-artempodrez-5716034.jpg'); background-size: cover; background-position: center;">
-                 <div class="slide-img-overlay" style="background: linear-gradient(90deg, rgba(0, 21, 41, 0.95) 30%, rgba(16, 185, 129, 0.1) 100%);"></div>
-                 <div class="container slide-content-unique text-white">
-                    <span class="badge bg-emerald text-white mb-4 px-3 py-2">Institutional Stability</span>
-                    <h1 class="display-1 fw-bold text-white mb-3" style="text-shadow: 0 4px 10px rgba(0,0,0,0.3);">Trust Built on <br><span style="color: #10b981;">Performance.</span></h1>
-                    <p class="lead opacity-75 mb-5" style="max-width: 600px;">Delivering stability and governance-led finance for 13+ years across regional hubs.</p>
-                    <a href="#about" class="btn btn-emerald btn-lg h4 mb-0">Governance Model</a>
-                 </div>
-            </div>
             
+            <div class="slide-unique" style="background-image: url('assets/images/Agriculture.jpg'); background-size: cover; background-position: center;">
+                <div class="slide-img-overlay"></div>
+                <div class="container slide-content-unique text-white">
+                   <span class="badge bg-emerald text-white mb-3 px-3 py-2 shadow-sm">Agricultural Financing</span>
+                   <h1 class="display-1 fw-bold text-white mb-3">Modern Farming.<br><span style="color: #10b981;">Massive Yields.</span></h1>
+                   <p class="lead opacity-75 mb-5" style="max-width: 600px;">Seasonal financing for Ugandan farmers. Get input advances and mechanization support when you need it most.</p>
+                   <a href="#contact" class="btn btn-emerald btn-lg">Apply for Agri-Loan</a>
+                </div>
+           </div>
+
             <div class="slider-nav">
                 <div class="slider-dot active" data-slide="0"></div>
                 <div class="slider-dot" data-slide="1"></div>
             </div>
         </section>
 
-        <!-- Trust Pillars Dashboard -->
-        <section id="about" class="section-jump py-5 bg-white">
-            <div class="container py-5">
-                <div class="row align-items-center mb-5" data-aos="fade-up">
-                    <div class="col-lg-6"><h2 class="display-4 fw-bold text-primary-deep">Institutional Pillars of <br> Governance & Trust.</h2></div>
-                    <div class="col-lg-6"><p class="lead text-muted opacity-90">A dedicated capital architect identifying high-growth potential within regional clusters and deploying quality capital to catalyze lasting impact.</p></div>
+        <!-- Loan Products Section -->
+        <section id="products" class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-4 fw-bold text-primary-deep">Loan Solutions for Every Ugandan</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 700px;">Tailored financial products with realistic terms, competitive interest rates, and fast processing.</p>
                 </div>
                 
                 <div class="row g-4">
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-unique-p h-100" style="background: rgba(0, 43, 82, 0.03); color: var(--primary-deep); border: none;">
-                            <div class="icon-circle-p"><i class="fas fa-landmark"></i></div>
-                            <h4 class="fw-bold mb-3">Governance-First</h4>
-                            <p class="small mb-0 opacity-80">Adopting global benchmarks in governance and financial safety to protect regional wealth and investor trust.</p>
+                    <!-- Salary Loans -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-card">
+                            <img src="assets/images/pexels-artempodrez-5716034.jpg" class="product-img" alt="Salary Loans">
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-2">Salary Loans</h4>
+                                <p class="small text-muted mb-3">For civil servants and private sector employees. Quick cash for personal needs with easy repayments from your salary.</p>
+                                <ul class="list-unstyled mb-4 small opacity-75">
+                                    <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Limits up to UGX 20M</li>
+                                    <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Approval under 24 hours</li>
+                                    <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Flexible 6-36 month terms</li>
+                                </ul>
+                                <a href="#contact" class="btn btn-emerald w-100">Apply Now</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-unique-p h-100" style="background: transparent; border: 2px solid #e2e8f0; color: var(--primary-deep);">
-                            <div class="icon-circle-p" style="background: var(--secondary-emerald);"><i class="fas fa-handshake"></i></div>
-                            <h4 class="fw-bold mb-3">Community Hubs</h4>
-                            <p class="small mb-0 opacity-80">Deep localized presence in Arua, Gulu, and Soroti for direct support to partners, entrepreneurs and groups.</p>
+
+                    <!-- Business/SME Loans -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-card">
+                            <img src="assets/images/Top-Side-Hustles-Most-Likely-to-Succeed-in-Kampala-in-2025.webp" class="product-img" alt="Business Loans">
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-2">Business Boost Loans</h4>
+                                <p class="small text-muted mb-3">For market vendors, wholesalers, and shopkeepers. Scale your stock and operations with our working capital.</p>
+                                <ul class="list-unstyled mb-4 small opacity-75">
+                                    <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Competitive monthly rates</li>
+                                    <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Daily/Weekly repayment options</li>
+                                    <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Mentorship & Advisory included</li>
+                                </ul>
+                                <a href="#contact" class="btn btn-emerald w-100">Boost My Business</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Boda Boda Financing -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-card">
+                            <img src="assets/images/pexels-energepic-com-27411-2988232.jpg" class="product-img" alt="Boda Boda Financing">
+                            <div class="p-4">
+                                <h4 class="fw-bold mb-2">Asset & Boda Financing</h4>
+                                <p class="small text-muted mb-3">Become your own boss. We finance Bajaj Boxer motorcycles and other essential business assets.</p>
+                                <ul class="list-unstyled mb-4 small opacity-75">
+                                    <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Low initial deposit</li>
+                                    <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Comprehensive Insurance</li>
+                                    <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Ownership transfer on completion</li>
+                                </ul>
+                                <a href="#contact" class="btn btn-emerald w-100">Start My Journey</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Ecosystems Interactive Cards -->
-        <section id="ecosystems" class="section-jump py-5 section-blue-green">
-            <div class="container py-5">
+        <!-- How It Works -->
+        <section id="how-it-works" class="section-padding bg-white">
+            <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
-                    <span class="text-emerald fw-bold text-uppercase">Lending Ecosystems</span>
-                    <h2 class="display-4 fw-bold text-white mt-2">Specialized Capital Operations.</h2>
-                    <p class="lead opacity-85 mt-3 mx-auto" style="max-width: 800px;">Jubilee Microfinance operates through a multi-tiered lending architecture, delivering precision-targeted capital to the core engines of regional growth across Northern Uganda.</p>
+                    <span class="text-emerald fw-bold text-uppercase">The Jubilee Way</span>
+                    <h2 class="display-4 fw-bold text-primary-deep">3 Easy Steps to Your Loan</h2>
                 </div>
                 
-                <div class="row g-5">
-                    <!-- Individual & Business -->
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <div class="card-unique-p h-100">
-                            <h3 class="fw-bold text-emerald mb-4">Individual & SME Hub</h3>
-                            <p class="opacity-80 mb-4">We provide tailored financial facilities to individuals looking to manage personal household growth and emergency liquidity. Simultaneously, our **SME Acceleration Capital** supports local wholesalers and high-impact traders, offering dynamic working capital injections and premise development funding to scale operational capacity in urban commercial hubs.</p>
-                            <img src="assets/images/pexels-energepic-com-27411-2988232.jpg" class="img-fluid rounded-4 shadow mb-4" alt="Personal & Business Finance">
-                            <ul class="list-unstyled d-flex flex-column gap-3 opacity-90">
-                                <li class="d-flex gap-3"><i class="fas fa-check text-emerald"></i> <span>Dynamic Working Capital for Wholesale Traders</span></li>
-                                <li class="d-flex gap-3"><i class="fas fa-check text-emerald"></i> <span>Tailored Personal Household Growth Credit</span></li>
-                            </ul>
+                <div class="row g-5 mt-4">
+                    <div class="col-lg-4 step-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-icon">1</div>
+                        <h4 class="fw-bold mb-3">Submit Application</h4>
+                        <p class="text-muted">Fill out our simple online form or visit any of our hubs in Arua, Gulu, or Kampala with your ID.</p>
+                    </div>
+                    <div class="col-lg-4 step-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-icon">2</div>
+                        <h4 class="fw-bold mb-3">Rapid Approval</h4>
+                        <p class="text-muted">Our credit team reviews your request within hours using our precision scoring system.</p>
+                    </div>
+                    <div class="col-lg-4 step-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-icon">3</div>
+                        <h4 class="fw-bold mb-3">Instant Cash</h4>
+                        <p class="text-muted">Funds are disbursed directly to your Mobile Money (MTN/Airtel) or Bank account instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="section-padding bg-light overflow-hidden">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
+                        <h2 class="display-4 fw-bold text-primary-deep mb-4">Empowering <br><span class="text-emerald">Ugandan Success.</span></h2>
+                        <p class="lead text-muted">Join thousands of Ugandans who have scaled their dreams with Jubilee Microfinance.</p>
+                        <div class="mt-4 d-flex gap-2">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <span class="ms-2 fw-bold">4.9/5 Trust Rating</span>
                         </div>
                     </div>
-                    <!-- Agriculture & SACCOs -->
-                    <div class="col-lg-6" data-aos="fade-left">
-                        <div class="card-unique-p h-100">
-                            <h3 class="fw-bold text-emerald mb-4">Agriculture & SACCO Networks</h3>
-                            <p class="opacity-80 mb-4">Our specialized **Agricultural Value-Chain Engine** delivers lifecycle-matched capital for large-scale enterprises and seasonal farmers, covering input advances and mechanization upgrades. Furthermore, we provide institutional support to **SACCOs (Savings and Credit Co-operative Societies)**, strengthening community-led financial networks through strategic group-lending facilities and secondary liquidity support.</p>
-                            <img src="assets/images/Agriculture.jpg" class="img-fluid rounded-4 shadow mb-4" alt="Agricultural & SACCO Finance">
-                            <ul class="list-unstyled d-flex flex-column gap-3 opacity-90">
-                                <li class="d-flex gap-3"><i class="fas fa-check text-emerald"></i> <span>Seasonal Input Advances for Harvest Maximization</span></li>
-                                <li class="d-flex gap-3"><i class="fas fa-check text-emerald"></i> <span>Strategic Community SACCO Liquidity Support</span></li>
-                            </ul>
+                    <div class="col-lg-8">
+                        <div class="row g-4">
+                            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="card p-4 border-0 rounded-4 shadow-sm h-100">
+                                    <p class="mb-4">"Jubilee took a chance on my matooke business when others said no. Today, I have three stalls at Nakasero Market thanks to their support."</p>
+                                    <div class="d-flex align-items-center mt-auto">
+                                        <div class="ms-3">
+                                            <h6 class="fw-bold mb-0">Sarah Namukasa</h6>
+                                            <small class="text-muted">Market Vendor, Kampala</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="card p-4 border-0 rounded-4 shadow-sm h-100">
+                                    <p class="mb-4">"The agricultural loan helped me buy hybrid seeds and a pump for my coffee farm in Gulu. My harvest doubled this year!"</p>
+                                    <div class="d-flex align-items-center mt-auto">
+                                        <div class="ms-3">
+                                            <h6 class="fw-bold mb-0">Okello Moses</h6>
+                                            <small class="text-muted">Coffee Farmer, Gulu</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Impact Dashboard Layer -->
-        <section id="impact" class="section-jump py-5 bg-white">
-            <div class="container py-5">
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding bg-white">
+            <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
-                    <span class="text-emerald fw-bold text-uppercase letter-spacing-1">Institutional Impact</span>
-                    <h2 class="display-4 fw-bold text-primary-deep mt-2">Precision Performance Metrics.</h2>
-                    <p class="lead text-muted mt-3 mx-auto" style="max-width: 720px;">Measuring our track record of household stability, business growth, and institutional-grade capital deployment.</p>
+                    <h2 class="display-4 fw-bold text-primary-deep">Frequently Asked Questions</h2>
                 </div>
-                <div class="row g-4 text-center">
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="p-5 rounded-4 shadow-sm h-100 position-relative overflow-hidden" style="border: 1px solid #e1e8ed;">
-                            <div class="text-emerald mb-2"><i class="fas fa-arrow-trend-up"></i> +12% YoY</div>
-                            <h2 class="display-4 font-weight-bold text-primary-deep counter" data-suffix="B+">125B+</h2>
-                            <p class="text-emerald text-uppercase fw-bold letter-spacing-1 small">UGX Capital Imparted</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="p-5 rounded-4 shadow-sm h-100 bg-gradient-blue-green text-white">
-                            <div class="text-accent-mint mb-2"><i class="fas fa-shield-check"></i> Zero Default</div>
-                            <h2 class="display-4 font-weight-bold counter" data-suffix="%">100%</h2>
-                            <p class="text-accent-mint text-uppercase fw-bold border-bottom border-white border-opacity-25 pb-2 d-inline-block small">Lending Success Rate</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="p-5 rounded-4 shadow-sm h-100" style="border: 1px solid #e1e8ed;">
-                            <div class="text-emerald mb-2"><i class="fas fa-users"></i> Net Expansion</div>
-                            <h2 class="display-4 font-weight-bold text-primary-deep counter">48,500</h2>
-                            <p class="text-emerald text-uppercase fw-bold small">Active Growth Hubs</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="p-5 rounded-4 shadow-sm h-100" style="background: rgba(20, 184, 166, 0.05); border: 1px solid rgba(16, 185, 129, 0.1);">
-                            <div class="text-teal mb-2"><i class="fas fa-chart-pie"></i> Risk Managed</div>
-                            <h2 class="display-4 font-weight-bold text-primary-deep counter" data-suffix="%">1.4%</h2>
-                            <p class="text-teal text-uppercase fw-bold small">Institutional NPL</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                                        What documents do I need to apply?
+                                    </button>
+                                </h2>
+                                <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body pb-4">
+                                        You typically need a valid National ID, passport photos, and proof of income (like 3 months' bank/mobile money statement). For business loans, we may visit your business premises.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 border-top">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                                        How long does it take to get the money?
+                                    </button>
+                                </h2>
+                                <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body pb-4">
+                                        Our goal is to have funds in your hands within 24 hours of a completed application. Many customers receive their funds via Mobile Money in just a few hours.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 border-top">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                                        Are there any hidden fees?
+                                    </button>
+                                </h2>
+                                <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body pb-4">
+                                        No. Transparency is one of our core pillars. All interest rates, processing fees, and insurance costs are clearly explained before you sign any agreement.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Dynamic Hubs / Contact Hub -->
-        <section id="contact" class="section-jump py-5 bg-light">
-            <div class="container py-5">
-                <div class="card p-5 border-0 rounded-4 shadow shadow-lg overflow-hidden position-relative">
+        <!-- Contact / Apply Hub -->
+        <section id="contact" class="section-padding bg-light">
+            <div class="container">
+                <div class="card p-4 p-md-5 border-0 rounded-4 shadow shadow-lg position-relative overflow-hidden mb-5">
                     <div class="row g-5 align-items-center">
                         <div class="col-lg-6" data-aos="fade-right">
-                             <h2 class="display-5 fw-bold text-primary-deep">Connect with a <br><span class="text-emerald">Capital Architect.</span></h2>
-                             <p class="lead text-muted mt-4">Direct access to localized support. We optimize your financial trajectory with data-led credit solutions.</p>
-                             <div class="mt-5 text-primary-deep">
-                                 <p class="mb-2 h5"><i class="bi bi-geo-alt-fill text-emerald me-3"></i> Arua City House, 2nd Floor (HQ)</p>
-                                 <p class="mb-2 h5"><i class="bi bi-telephone-fill text-emerald me-3"></i> +256 709 300 099</p>
-                                 <p class="mb-0 h5"><i class="bi bi-envelope-fill text-emerald me-3"></i> ops@jubileemicrofinance.com</p>
+                             <h2 class="display-5 fw-bold text-primary-deep">Ready to <span class="text-emerald">Get Started?</span></h2>
+                             <p class="lead text-muted mt-4">Submit your inquiry and a loan officer will contact you within 30 minutes during business hours.</p>
+                             <div class="mt-5">
+                                 <div class="d-flex align-items-center mb-4">
+                                     <div class="icon-circle-p m-0 me-3" style="width: 50px; height: 50px;"><i class="bi bi-telephone"></i></div>
+                                     <div>
+                                         <p class="mb-0 small text-muted">Call or WhatsApp</p>
+                                         <h5 class="fw-bold mb-0">+256 709 300 099</h5>
+                                     </div>
+                                 </div>
+                                 <div class="d-flex align-items-center mb-4">
+                                     <div class="icon-circle-p m-0 me-3" style="width: 50px; height: 50px; background: var(--secondary-emerald);"><i class="bi bi-geo-alt"></i></div>
+                                     <div>
+                                         <p class="mb-0 small text-muted">Visit Our Head Office</p>
+                                         <h5 class="fw-bold mb-0">Arua City House, 2nd Floor</h5>
+                                     </div>
+                                 </div>
+                                 <div class="d-flex align-items-center">
+                                     <div class="icon-circle-p m-0 me-3" style="width: 50px; height: 50px; background: var(--primary-deep);"><i class="bi bi-clock"></i></div>
+                                     <div>
+                                         <p class="mb-0 small text-muted">Working Hours</p>
+                                         <h5 class="fw-bold mb-0">Mon - Sat: 8:00 AM - 6:00 PM</h5>
+                                     </div>
+                                 </div>
                              </div>
                         </div>
                         <div class="col-lg-6" data-aos="fade-left">
-                            <form action="#" method="POST" class="p-4 bg-white rounded-4 shadow-sm border">
-                                <h4 class="fw-bold mb-4">Submit Network Inquiry</h4>
+                            <form action="https://formspree.io/f/xvgoenra" method="POST" class="p-4 bg-white rounded-4 shadow-sm border">
+                                <h4 class="fw-bold mb-4">Loan Inquiry Form</h4>
                                 <div class="row g-3">
-                                    <div class="col-12"><input type="text" class="form-control" placeholder="Full Name / Hub Organization" required></div>
-                                    <div class="col-12"><input type="email" class="form-control" placeholder="Contact Email" required></div>
-                                    <div class="col-12"><select class="form-select"><option>Agri-Value Cycle Funding</option><option>SME Acceleration Capital</option></select></div>
-                                    <div class="col-12"><textarea class="form-control" rows="4" placeholder="How can we assist your growth goal?"></textarea></div>
-                                    <div class="col-12"><button type="submit" class="btn btn-emerald w-100 p-3 justify-content-center">Request Deployment</button></div>
+                                    <div class="col-12"><input type="text" name="name" class="form-control" placeholder="Full Name (As on National ID)" required></div>
+                                    <div class="col-12"><input type="tel" name="phone" class="form-control" placeholder="Phone Number (e.g., 077...)" required></div>
+                                    <div class="col-12">
+                                        <select name="loan_type" class="form-select" required>
+                                            <option value="">Select Loan Type</option>
+                                            <option>Salary Loan</option>
+                                            <option>Business/Market Loan</option>
+                                            <option>Boda-Boda Financing</option>
+                                            <option>Agriculture Loan</option>
+                                            <option>School Fees Loan</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12"><input type="text" name="amount" class="form-control" placeholder="Requested Amount (UGX)" required></div>
+                                    <div class="col-12"><button type="submit" class="btn btn-emerald w-100 p-3">Submit Request <i class="bi bi-send ms-2"></i></button></div>
                                 </div>
+                                <p class="small text-center text-muted mt-3 mb-0">Professional secrecy and data protection guaranteed.</p>
                             </form>
                         </div>
                     </div>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="row g-4 text-center justify-content-center opacity-75">
+                    <div class="col-6 col-md-3"><h5 class="fw-bold text-primary-deep">UMRA Licensed</h5></div>
+                    <div class="col-6 col-md-3"><h5 class="fw-bold text-primary-deep">AMFIU Member</h5></div>
+                    <div class="col-6 col-md-3"><h5 class="fw-bold text-primary-deep">UGAFODE Partner</h5></div>
+                    <div class="col-6 col-md-3"><h5 class="fw-bold text-primary-deep">URB Compliance</h5></div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Refined Hub Footer -->
+    <!-- Footer -->
     <footer class="footer-green-blue text-white">
         <div class="container py-4">
             <div class="row gy-5">
                 <div class="col-lg-4">
                     <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 50px; filter: brightness(0) invert(1);">
-                    <p class="mt-4 opacity-75">Scaling regional prosperity across Northern Uganda with precision-financing and institutional governance since 2012.</p>
+                    <p class="mt-4 opacity-75">Empowering Ugandan individuals and SMEs through accessible, transparent, and innovative micro-financing solutions since 2012.</p>
                     <div class="d-flex gap-4 mt-4 h4 mb-0 opacity-50">
-                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
                         <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold text-emerald mb-4">Quick Links</h5>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="fw-bold text-emerald mb-4">Our Loans</h5>
                     <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
-                        <li><a href="#about" class="text-white text-decoration-none">Who We Are</a></li>
-                        <li><a href="#ecosystems" class="text-white text-decoration-none">Financial Ecosystems</a></li>
-                        <li><a href="#impact" class="text-white text-decoration-none">Impact Dashboard</a></li>
-                        <li><a href="#contact" class="text-white text-decoration-none">Inquiry Hub</a></li>
+                        <li><a href="#products" class="text-white text-decoration-none">Salary Loans</a></li>
+                        <li><a href="#products" class="text-white text-decoration-none">Business Boost</a></li>
+                        <li><a href="#products" class="text-white text-decoration-none">Agri-Finance</a></li>
+                        <li><a href="#products" class="text-white text-decoration-none">Asset Financing</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold text-emerald mb-4">Institutional Info</h5>
-                    <p class="small opacity-75 mb-2"><strong>Registration:</strong> UG-MFI-00412</p>
-                    <p class="small opacity-75 mb-2"><strong>Tax Compliance:</strong> 100293485</p>
-                    <p class="small opacity-75"><strong>Auditors:</strong> Grant Thornton (UG)</p>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fw-bold text-emerald mb-4">Quick Links</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
+                        <li><a href="#top" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#how-it-works" class="text-white text-decoration-none">How to Apply</a></li>
+                        <li><a href="#faq" class="text-white text-decoration-none">FAQs</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Locate Us</a></li>
+                    </ul>
                 </div>
-                <div class="col-md-2 d-none d-lg-block">
-                    <div class="p-4 border border-secondary rounded-4 text-center">
-                        <h4 class="fw-bold mb-0">A+</h4>
-                        <p class="small opacity-75 mb-0">Asset Integrity</p>
-                    </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fw-bold text-emerald mb-4">Contact Us</h5>
+                    <p class="small opacity-75 mb-2"><i class="bi bi-geo-alt me-2 text-emerald"></i> Arua City House, 2nd Floor</p>
+                    <p class="small opacity-75 mb-2"><i class="bi bi-telephone me-2 text-emerald"></i> +256 709 300 099</p>
+                    <p class="small opacity-75"><i class="bi bi-envelope me-2 text-emerald"></i> info@jubileemicrofinance.com</p>
                 </div>
             </div>
             <hr class="my-5 opacity-10">
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center opacity-50 small">
-                <p class="mb-0">&copy; 2026 Jubilee Microfinance. All Rights Reserved.</p>
-                <p class="mb-0">Powered by <a href="#" class="text-white">SpiderwebUG</a></p>
+                <p class="mb-0">&copy; 2026 Jubilee Microfinance. UMRA Licensed MFI. All Rights Reserved.</p>
+                <p class="mb-0">A <a href="#" class="text-white text-decoration-none">SpiderwebUG</a> Digital Experience</p>
             </div>
         </div>
     </footer>
@@ -292,11 +482,11 @@
         // Navigation Logic
         const nav = document.getElementById('mainNav');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) { nav.classList.add('scrolled'); }
+            if (window.scrollY > 80) { nav.classList.add('scrolled'); }
             else { nav.classList.remove('scrolled'); }
         });
 
-        // Unique Hero Slider Logic
+        // Hero Slider Logic
         const slides = document.querySelectorAll('.slide-unique');
         const dots = document.querySelectorAll('.slider-dot');
         let currentSlide = 0;
@@ -310,7 +500,7 @@
         }
 
         dots.forEach((dot, idx) => dot.addEventListener('click', () => goToSlide(idx)));
-        setInterval(() => goToSlide((currentSlide + 1) % slides.length), 7000);
+        setInterval(() => goToSlide((currentSlide + 1) % slides.length), 6000);
 
         // Mobile Menu
         const mToggle = document.getElementById('mobileNavToggle');
@@ -325,43 +515,6 @@
             const p = document.getElementById('preloader'); 
             p.style.opacity = '0'; 
             setTimeout(() => p.style.display = 'none', 500); 
-        });
-
-        // Optimized Counter Logic
-        const counters = document.querySelectorAll('.counter');
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const targetText = counter.innerText;
-                const target = parseFloat(targetText.replace(/[^0-9.]/g, ''));
-                const current = parseFloat(counter.getAttribute('data-count') || 0);
-                const step = target / 100;
-                
-                if (current < target) {
-                    const next = current + step;
-                    counter.setAttribute('data-count', next);
-                    
-                    let suffix = counter.getAttribute('data-suffix') || '';
-                    let formatted;
-                    
-                    if (target % 1 === 0) {
-                        formatted = Math.ceil(next).toLocaleString();
-                    } else {
-                        formatted = next.toFixed(1);
-                    }
-                    
-                    counter.innerText = formatted + suffix;
-                    setTimeout(updateCount, 15);
-                } else {
-                    counter.innerText = targetText;
-                }
-            };
-            const obs = new IntersectionObserver(e => { 
-                if(e[0].isIntersecting) { 
-                    updateCount(); 
-                    obs.unobserve(counter); 
-                } 
-            });
-            obs.observe(counter);
         });
     </script>
 </body>

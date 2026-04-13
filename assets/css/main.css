@@ -28,12 +28,22 @@ body {
   font-family: 'Inter', sans-serif;
   color: var(--primary-deep);
   background-color: var(--bg-light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   color: var(--primary-deep);
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: calc(1.8rem + 1.5vw); }
+  h2 { font-size: calc(1.5rem + 1vw); }
+  h3 { font-size: calc(1.3rem + 0.5vw); }
+  body { font-size: 15px; }
 }
 
 /* --- Unique Slider Design Elements --- */
@@ -124,24 +134,44 @@ h1, h2, h3, h4, h5 {
   font-size: 1.5rem; color: white; margin-bottom: 2rem;
 }
 
-/* --- Premium Buttons: Green Focus --- */
 .btn-emerald {
   background: linear-gradient(90deg, var(--secondary-emerald), var(--secondary-teal));
   color: white;
-  padding: 1rem 2.5rem;
+  padding: 0.8rem 2rem;
   border-radius: 100px;
   font-weight: 700;
   border: none;
   box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+  min-height: 48px; /* Touch target */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.btn-emerald:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+  color: white;
 }
 
 .btn-blue-outline {
   border: 2px solid var(--primary-light);
   color: var(--primary-light);
-  padding: 1rem 2.5rem;
+  padding: 0.8rem 2rem;
   border-radius: 100px;
   font-weight: 700;
   background: transparent;
+  min-height: 48px; /* Touch target */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.btn-blue-outline:hover {
+  background: var(--primary-light);
+  color: white;
 }
 
 /* --- Footer Refinement --- */

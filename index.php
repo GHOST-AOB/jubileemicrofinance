@@ -1,205 +1,216 @@
 <?php
-$title = "Jubilee Microfinance – Advanced Financial Ecosystem for Northern Uganda";
-$tagline = "Empowering Growth with Data-Driven Solutions";
-$description = "Jubilee Microfinance is a premium financial institution serving the West Nile, Gulu, Soroti, and Lira communities. Explore our specialized agricultural, business, and personal lending ecosystems.";
-$keywords = "microfinance Uganda, high-growth business loans, agricultural ecosystem financing, SME capital, financial inclusion Northern Uganda";
-$featured_image = 'assets/images/pexels-moh-dikko-photography-2151327861-33023725.jpg';
+$title = "Jubilee Microfinance | Sente Mangu, Growth Now";
+$description = "Jubilee Microfinance provides fast, flexible, and affordable loan solutions across Uganda. Agricultural, Salary, Business, and Boda Boda loans with rapid approval.";
+$keywords = "microfinance Uganda, salary loans Kampala, agricultural loans Gulu, business loans Arua, boda boda financing";
+$featured_image = 'assets/images/pexels-kaypics-28112436.jpg';
+
 include "includes/header.php";
 include "includes/menu.php";
 ?>
 
-<main>
-    <!-- Hero V2: Ambitious & Visual -->
-    <section class="hero-v2">
-        <div class="hero-bg-media">
-            <div class="hero-slide active" style="background-image: url('assets/images/pexels-kaypics-28112436.jpg'); opacity: 0.6;"></div>
+<main id="top">
+    <!-- Hero Slider -->
+    <section class="slider-container-unique">
+        <div class="slide-unique active" style="background-image: url('assets/images/pexels-kaypics-28112436.jpg'); background-size: cover; background-position: center;">
+             <div class="slide-img-overlay"></div>
+             <div class="container slide-content-unique text-white" data-aos="fade-right">
+                <span class="badge bg-emerald text-white mb-3 px-3 py-2 shadow-sm">UMRA Licensed Institution</span>
+                <h1 class="display-1 fw-bold text-white mb-3">Sente mangu.<br><span style="color: #10b981;">Growth now.</span></h1>
+                <p class="lead opacity-75 mb-5" style="max-width: 600px;">Access fast, flexible, and affordable financial solutions designed for the Ugandan market. From Agriculture to Business, we fuel your dreams.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="contact.php" class="btn btn-emerald btn-lg px-4 fs-5">Get a Loan Today</a>
+                    <a href="#products" class="btn btn-outline-light btn-lg px-4 fs-5">View Our Loans</a>
+                </div>
+             </div>
         </div>
-        <div class="hero-v2-overlay"></div>
-        <div class="container hero-v2-content" data-aos="fade-right">
-            <span class="company-badge mb-4">Institutional Quality Microfinance</span>
-            <h1 class="headline-xl">Capitalize On <br><span class="text-gradient">Real Opportunity.</span></h1>
-            <p class="hero-subtitle mb-5">Deploying smart capital across Northern Uganda's most promising <br> agricultural and business sectors since 2012.</p>
-            
-            <div class="hero-btns-v2">
-                <a href="apply.php" class="btn-premium btn-p-primary">Instant Loan Application <i class="bi bi-rocket-takeoff"></i></a>
-                <a href="investors.php" class="btn-premium btn-p-outline ms-md-4 mt-3 mt-md-0 d-inline-block">Impact Performance</a>
+        
+        <div class="slide-unique" style="background-image: url('assets/images/Agriculture.jpg'); background-size: cover; background-position: center;">
+            <div class="slide-img-overlay"></div>
+            <div class="container slide-content-unique text-white">
+               <span class="badge bg-emerald text-white mb-3 px-3 py-2 shadow-sm">Agricultural Financing</span>
+               <h1 class="display-1 fw-bold text-white mb-3">Modern Farming.<br><span style="color: #10b981;">Massive Yields.</span></h1>
+               <p class="lead opacity-75 mb-5" style="max-width: 600px;">Seasonal financing for Ugandan farmers. Get input advances and mechanization support when you need it most.</p>
+               <a href="contact.php" class="btn btn-emerald btn-lg">Apply for Agri-Loan</a>
             </div>
+       </div>
 
-            <!-- Dashboard Stats Overlay -->
-            <div class="hero-stats-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="h-stat-item">
-                    <h3 class="counter">45,000+</h3>
-                    <p>Total Disbursals</p>
-                </div>
-                <div class="h-stat-item">
-                    <h3 class="counter">125B</h3>
-                    <p>Economic Impact (UGX)</p>
-                </div>
-                <div class="h-stat-item">
-                    <h3 class="counter">98.2%</h3>
-                    <p>Repayment Success</p>
-                </div>
-                <div class="h-stat-item">
-                    <h3 class="counter">14</h3>
-                    <p>Active Service Hubs</p>
-                </div>
-            </div>
+        <div class="slider-nav">
+            <div class="slider-dot active" data-slide="0"></div>
+            <div class="slider-dot" data-slide="1"></div>
         </div>
     </section>
 
-    <!-- Data-Rich Metrics Dashboard Section -->
-    <section class="data-dashboard-section">
+    <!-- Loan Products Section -->
+    <section id="products" class="section-padding bg-light">
         <div class="container">
-            <div class="section-header text-center mb-5" data-aos="fade-up">
-                <span class="section-subtitle">Real-Time Impact Metrics</span>
-                <h2 class="section-title">Institutional Growth Indicators</h2>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold text-primary-deep">Loan Solutions for Every Ugandan</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">Tailored financial products with realistic terms, competitive interest rates, and fast processing.</p>
             </div>
             
-            <div class="grid-complex">
-                <div class="metric-card-p" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="metric-icon-wrap"><i class="fas fa-chart-line"></i></div>
-                    <span class="metric-label">Year-over-Year Growth</span>
-                    <h2 class="metric-value">+24%</h2>
-                    <p class="small text-muted mb-0">Organic expansion in 2025</p>
-                    <div class="metric-progress">
-                        <div class="metric-progress-bar" style="width: 85%;"></div>
+            <div class="row g-4">
+                <!-- Salary Loans -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <img src="assets/images/pexels-artempodrez-5716034.jpg" class="product-img" alt="Salary Loans">
+                        <div class="p-4">
+                            <h4 class="fw-bold mb-2">Salary Loans</h4>
+                            <p class="small text-muted mb-3">For civil servants and private sector employees. Quick cash for personal needs with easy repayments from your salary.</p>
+                            <ul class="list-unstyled mb-4 small opacity-75">
+                                <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Limits up to UGX 20M</li>
+                                <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Approval under 24 hours</li>
+                                <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Flexible 6-36 month terms</li>
+                            </ul>
+                            <a href="contact.php" class="btn btn-emerald w-100">Apply Now</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="metric-card-p" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="metric-icon-wrap"><i class="fas fa-users"></i></div>
-                    <span class="metric-label">Household Empowerment</span>
-                    <h2 class="metric-value">12,500</h2>
-                    <p class="small text-muted mb-0">Active families supported</p>
-                    <div class="metric-progress">
-                        <div class="metric-progress-bar" style="width: 72%; background: var(--accent);"></div>
+                <!-- Business/SME Loans -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <img src="assets/images/Top-Side-Hustles-Most-Likely-to-Succeed-in-Kampala-in-2025.webp" class="product-img" alt="Business Loans">
+                        <div class="p-4">
+                            <h4 class="fw-bold mb-2">Business Boost Loans</h4>
+                            <p class="small text-muted mb-3">For market vendors, wholesalers, and shopkeepers. Scale your stock and operations with our working capital.</p>
+                            <ul class="list-unstyled mb-4 small opacity-75">
+                                <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Competitive monthly rates</li>
+                                <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Daily/Weekly repayment options</li>
+                                <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Mentorship & Advisory included</li>
+                            </ul>
+                            <a href="contact.php" class="btn btn-emerald w-100">Boost My Business</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="metric-card-p" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="metric-icon-wrap"><i class="fas fa-landmark"></i></div>
-                    <span class="metric-label">Lending Capacity</span>
-                    <h2 class="metric-value">25B</h2>
-                    <p class="small text-muted mb-0">Ready-to-deploy capital (UGX)</p>
-                    <div class="metric-progress">
-                        <div class="metric-progress-bar" style="width: 90%;"></div>
-                    </div>
-                </div>
-
-                <div class="metric-card-p" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="metric-icon-wrap"><i class="fas fa-shield-alt"></i></div>
-                    <span class="metric-label">Portfolio Stability</span>
-                    <h2 class="metric-value">0.8%</h2>
-                    <p class="small text-muted mb-0">Non-Performing Loan (NPL)</p>
-                    <div class="metric-progress">
-                        <div class="metric-progress-bar" style="width: 99.2%; background: #3b82f6;"></div>
+                <!-- Boda Boda Financing -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <img src="assets/images/pexels-energepic-com-27411-2988232.jpg" class="product-img" alt="Boda Boda Financing">
+                        <div class="p-4">
+                            <h4 class="fw-bold mb-2">Asset & Boda Financing</h4>
+                            <p class="small text-muted mb-3">Become your own boss. We finance Bajaj Boxer motorcycles and other essential business assets.</p>
+                            <ul class="list-unstyled mb-4 small opacity-75">
+                                <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Low initial deposit</li>
+                                <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Comprehensive Insurance</li>
+                                <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Ownership transfer on completion</li>
+                            </ul>
+                            <a href="contact.php" class="btn btn-emerald w-100">Start My Journey</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service Deep Dive: Substantive Content -->
-    <section id="ecosystem" class="service-deep-dive">
+    <!-- How It Works -->
+    <section id="how-it-works" class="section-padding bg-white">
         <div class="container">
-            <!-- Agricultural Ecosystem -->
-            <div class="service-detailed-wrap mb-5 pb-5">
-                <div class="service-media-grid" data-aos="fade-right">
-                    <div class="sm-img shadow-lg"><img src="assets/images/Agriculture.jpg" alt="Agricultural Finance"></div>
-                    <div class="sm-img shadow-lg"><img src="assets/images/pexels-moh-dikko-photography-2151327861-33023725.jpg" alt="Local Farming"></div>
-                    <div class="sm-img shadow-lg"><img src="assets/images/pexels-martin-kesene-52378543-7721902.jpg" alt="Harvest Quality"></div>
-                    <div class="sm-img shadow-lg" style="background: var(--secondary); display: flex; align-items: center; justify-content: center;">
-                        <span class="text-white text-center p-3 h4 mb-0 font-weight-bold">Serving <br> 4 Regions</span>
-                    </div>
-                </div>
-                <div class="service-text-pane" data-aos="fade-left">
-                    <span class="section-subtitle">Specialized Ecosystems</span>
-                    <h2 class="section-title">Agricultural Value-Chain Financing</h2>
-                    <p class="lead text-muted">A comprehensive capital engine designed specifically for the Ugandan agricultural cycle—from soil to market.</p>
-                    
-                    <div class="service-features-list">
-                        <div class="sf-item">
-                            <span class="sf-number">01</span>
-                            <div>
-                                <h5 class="mb-1">Input & Harvest Advances</h5>
-                                <p class="small text-muted mb-0">Instant liquidity matched to seasonal windows for maximum yield potential.</p>
-                            </div>
-                        </div>
-                        <div class="sf-item">
-                            <span class="sf-number">02</span>
-                            <div>
-                                <h5 class="mb-1">Equipment Lease-to-Own</h5>
-                                <p class="small text-muted mb-0">Modernize your farm with advanced machinery via low-friction asset financing.</p>
-                            </div>
-                        </div>
-                        <div class="sf-item">
-                            <span class="sf-number">03</span>
-                            <div>
-                                <h5 class="mb-1">Market Linkage Capital</h5>
-                                <p class="small text-muted mb-0">Bridge funding to secure larger buyers and export opportunities.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="agri-finance.php" class="btn-premium btn-p-primary mt-3">Explore Agricultural Hub <i class="fas fa-external-link-alt"></i></a>
-                </div>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-emerald fw-bold text-uppercase">The Jubilee Way</span>
+                <h2 class="display-4 fw-bold text-primary-deep">3 Easy Steps to Your Loan</h2>
             </div>
-
-            <!-- Business & Innovation Hub -->
-            <div class="service-detailed-wrap py-5">
-                <div class="service-text-pane" data-aos="fade-right">
-                    <span class="section-subtitle">Commercial Acceleration</span>
-                    <h2 class="section-title">The SME Capital Growth Hub</h2>
-                    <p class="lead text-muted">Strategic debt solutions for high-performance enterprises looking to scale their operations in urban centers.</p>
-                    
-                    <div class="service-features-list">
-                        <div class="sf-item">
-                            <span class="sf-number">01</span>
-                            <div>
-                                <h5 class="mb-1">Working Capital Injection</h5>
-                                <p class="small text-muted mb-0">Short-term facilities to manage inventory peaks and operational overheads.</p>
-                            </div>
-                        </div>
-                        <div class="sf-item">
-                            <span class="sf-number">02</span>
-                            <div>
-                                <h5 class="mb-1">Infrastructure Development</h5>
-                                <p class="small text-muted mb-0">Long-term capital for premise acquisition, factory upgrades, or fleet expansion.</p>
-                            </div>
-                        </div>
-                        <div class="sf-item">
-                            <span class="sf-number">03</span>
-                            <div>
-                                <h5 class="mb-1">Digital Merchant Solutions</h5>
-                                <p class="small text-muted mb-0">Integrated financing for stores adopting modern POS and digital payment systems.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="business-growth.php" class="btn-premium btn-p-outline mt-3">Business Growth Path <i class="fas fa-chart-pie"></i></a>
+            
+            <div class="row g-5 mt-4">
+                <div class="col-lg-4 step-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-icon">1</div>
+                    <h4 class="fw-bold mb-3">Submit Application</h4>
+                    <p class="text-muted">Fill out our simple online form or visit any of our hubs in Arua, Gulu, or Kampala with your ID.</p>
                 </div>
-                <div class="service-media-grid" data-aos="fade-left">
-                     <div class="sm-img shadow-lg" style="background: var(--primary); display: flex; align-items: center; justify-content: center;">
-                        <span class="text-white text-center p-3 h4 mb-0 font-weight-bold">98.2% <br> Success</span>
-                    </div>
-                    <div class="sm-img shadow-lg"><img src="assets/images/pexels-energepic-com-27411-2988232.jpg" alt="Business Growth"></div>
-                    <div class="sm-img shadow-lg"><img src="assets/images/Top-Side-Hustles-Most-Likely-to-Succeed-in-Kampala-in-2025.webp" alt="Innovation"></div>
-                    <div class="sm-img shadow-lg"><img src="assets/images/pexels-artempodrez-5716034.jpg" alt="Modern Banking"></div>
+                <div class="col-lg-4 step-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-icon">2</div>
+                    <h4 class="fw-bold mb-3">Rapid Approval</h4>
+                    <p class="text-muted">Our credit team reviews your request within hours using our precision scoring system.</p>
+                </div>
+                <div class="col-lg-4 step-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-icon">3</div>
+                    <h4 class="fw-bold mb-3">Instant Cash</h4>
+                    <p class="text-muted">Funds are disbursed directly to your Mobile Money (MTN/Airtel) or Bank account instantly.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Full Width Substantive Banner -->
-    <section class="banner-cta-v2 mt-5" style="background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('assets/images/pexels-kaypics-28112436.jpg') center/cover fixed;">
-        <div class="container text-center text-white py-5">
-            <h2 class="display-4 font-weight-bold mb-4">Empowering Regional Economies <br> With <span class="text-secondary">Precision Financing.</span></h2>
-            <p class="lead mb-5 opacity-75">Connect with our specialized financial architects who understand your specific market challenges.</p>
-            <div class="d-flex justify-content-center gap-4 flex-wrap">
-                <a href="branches.php" class="btn-premium btn-p-primary">Find Your Nearest Hub</a>
-                <a href="impact-report.php" class="btn-premium btn-p-outline border-white text-white">2025 Impact Report</a>
+    <!-- Stats Dashboard -->
+    <section class="section-padding bg-primary-deep text-white text-center">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3" data-aos="zoom-in">
+                    <h2 class="display-4 fw-bold counter" data-suffix="+">45,000</h2>
+                    <p class="text-emerald text-uppercase fw-bold small">Total Disbursals</p>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                    <h2 class="display-4 fw-bold counter" data-suffix="B">125</h2>
+                    <p class="text-emerald text-uppercase fw-bold small">Economic Impact (UGX)</p>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                    <h2 class="display-4 fw-bold counter" data-suffix="%">98.2</h2>
+                    <p class="text-emerald text-uppercase fw-bold small">Repayment Rate</p>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                    <h2 class="display-4 fw-bold counter">14</h2>
+                    <p class="text-emerald text-uppercase fw-bold small">Active Hubs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section-padding bg-light overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="display-4 fw-bold text-primary-deep mb-4">Empowering <br><span class="text-emerald">Ugandan Success.</span></h2>
+                    <p class="lead text-muted">Join thousands of Ugandans who have scaled their dreams with Jubilee Microfinance.</p>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card p-4 border-0 rounded-4 shadow-sm h-100">
+                                <p class="mb-4">"Jubilee took a chance on my matooke business when others said no. Today, I have three stalls at Nakasero Market thanks to their support."</p>
+                                <div class="d-flex align-items-center mt-auto">
+                                    <div>
+                                        <h6 class="fw-bold mb-0">Sarah Namukasa</h6>
+                                        <small class="text-muted">Market Vendor, Kampala</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card p-4 border-0 rounded-4 shadow-sm h-100">
+                                <p class="mb-4">"The agricultural loan helped me buy hybrid seeds and a pump for my coffee farm in Gulu. My harvest doubled this year!"</p>
+                                <div class="d-flex align-items-center mt-auto">
+                                    <div>
+                                        <h6 class="fw-bold mb-0">Okello Moses</h6>
+                                        <small class="text-muted">Coffee Farmer, Gulu</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </main>
 
+<script>
+    // Hero Slider Logic (PHP Version)
+    const slides = document.querySelectorAll('.slide-unique');
+    const dots = document.querySelectorAll('.slider-dot');
+    let currentSlide = 0;
+
+    function goToSlide(index) {
+        if(!slides[currentSlide]) return;
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    dots.forEach((dot, idx) => dot.addEventListener('click', () => goToSlide(idx)));
+    setInterval(() => goToSlide((currentSlide + 1) % slides.length), 6000);
+</script>
+
 <?php include "includes/footer.php"; ?>
-
