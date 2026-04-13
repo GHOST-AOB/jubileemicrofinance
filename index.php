@@ -61,7 +61,7 @@ include "includes/menu.php";
                                 <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Approval under 24 hours</li>
                                 <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Flexible 6-36 month terms</li>
                             </ul>
-                            <a href="contact.php" class="btn btn-emerald w-100">Apply Now</a>
+                            <a href="salary-loans.php" class="btn btn-emerald w-100">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ include "includes/menu.php";
                                 <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Daily/Weekly repayment options</li>
                                 <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Mentorship & Advisory included</li>
                             </ul>
-                            <a href="contact.php" class="btn btn-emerald w-100">Boost My Business</a>
+                            <a href="business-loans.php" class="btn btn-emerald w-100">Boost My Business</a>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@ include "includes/menu.php";
                                 <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Comprehensive Insurance</li>
                                 <li><i class="bi bi-check-circle-fill text-emerald me-2"></i> Ownership transfer on completion</li>
                             </ul>
-                            <a href="contact.php" class="btn btn-emerald w-100">Start My Journey</a>
+                            <a href="boda-boda-loans.php" class="btn btn-emerald w-100">Start My Journey</a>
                         </div>
                     </div>
                 </div>

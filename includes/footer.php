@@ -14,10 +14,11 @@
             <div class="col-lg-2 col-md-4">
                 <h5 class="fw-bold text-emerald mb-4">Our Loans</h5>
                 <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
-                    <li><a href="ecosystems.php" class="text-white text-decoration-none">Salary Loans</a></li>
-                    <li><a href="ecosystems.php" class="text-white text-decoration-none">Business Boost</a></li>
-                    <li><a href="ecosystems.php" class="text-white text-decoration-none">Agri-Finance</a></li>
-                    <li><a href="ecosystems.php" class="text-white text-decoration-none">Asset Financing</a></li>
+                    <li><a href="salary-loans.php" class="text-white text-decoration-none">Salary Loans</a></li>
+                    <li><a href="business-loans.php" class="text-white text-decoration-none">Business Boost</a></li>
+                    <li><a href="agri-loans.php" class="text-white text-decoration-none">Agri-Finance</a></li>
+                    <li><a href="boda-boda-loans.php" class="text-white text-decoration-none">Boda-Boda Finance</a></li>
+                    <li><a href="school-fees-loans.php" class="text-white text-decoration-none">School Fees</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-4">

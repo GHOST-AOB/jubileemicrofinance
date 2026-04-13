@@ -47,7 +47,7 @@ include "includes/menu.php";
                             <p class="small text-muted">3 Pay Slips + ID</p>
                         </div>
                     </div>
-                    <a href="contact.php" class="btn btn-emerald mt-4">Apply Now</a>
+                    <a href="salary-loans.php" class="btn btn-emerald mt-4">Apply Now</a>
                 </div>
             </div>
 
@@ -70,7 +70,7 @@ include "includes/menu.php";
                             <p class="small text-muted">Individual & Group SACCOs</p>
                         </div>
                     </div>
-                    <a href="contact.php" class="btn btn-emerald mt-4">Growth My Farm</a>
+                    <a href="agri-loans.php" class="btn btn-emerald mt-4">Growth My Farm</a>
                 </div>
             </div>
 
@@ -83,7 +83,7 @@ include "includes/menu.php";
                     <span class="text-emerald fw-bold">Commercial Growth</span>
                     <h2 class="display-5 fw-bold text-primary-deep mb-4">Market Vendor & SME Boost</h2>
                     <p class="text-muted mb-4">For traders in Kalerwe, Owino, or Arua Market. Scale your inventory and never miss a sale. We provide short-term working capital with easy daily or weekly repayment options.</p>
-                    <a href="contact.php" class="btn btn-emerald mt-4">Boost My Stock</a>
+                    <a href="business-loans.php" class="btn btn-emerald mt-4">Boost My Stock</a>
                 </div>
             </div>
         </div>
