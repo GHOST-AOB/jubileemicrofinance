@@ -15,7 +15,20 @@
   --glass: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.1);
   --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.15);
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.05);
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* --- Global Utilities --- */
+.section-padding { padding: 10vw 0; }
+.bg-primary-deep { background-color: var(--primary-deep) !important; }
+.text-emerald { color: var(--secondary-emerald) !important; }
+.bg-emerald { background-color: var(--secondary-emerald) !important; }
+.letter-spacing-1 { letter-spacing: 1px; }
+.mb-10vw { margin-bottom: 10vw; }
+
+@media (max-width: 768px) {
+    .section-padding { padding: 15vw 0; }
 }
 
 html {
@@ -174,6 +187,130 @@ h1, h2, h3, h4, h5 {
   color: white;
 }
 
+/* --- Product/Service Cards --- */
+.product-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  height: 100%;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-premium);
+  border-color: var(--secondary-emerald);
+}
+
+.product-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+/* --- How It Works Steps --- */
+.step-item {
+  position: relative;
+  text-align: center;
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--bg-dark);
+  color: var(--secondary-emerald);
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border: 4px solid var(--secondary-emerald);
+}
+
+/* --- Counters & Stats --- */
+.counter {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -2px;
+}
+
+/* --- Dropdown Styling --- */
+.dropdown-menu {
+  background: white;
+  border: none !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15) !important;
+  min-width: 240px;
+  border-radius: 20px !important;
+  padding: 1.5rem !important;
+}
+
+.dropdown-item {
+  font-weight: 600;
+  color: var(--primary-deep) !important;
+  transition: 0.3s;
+  padding: 0.8rem 1.2rem !important;
+  border-radius: 12px !important;
+}
+
+.dropdown-item:hover {
+  background: var(--accent-mint) !important;
+  color: var(--secondary-teal) !important;
+  padding-left: 1.5rem !important;
+}
+
+/* --- Form Refinement --- */
+.form-control, .form-select {
+  background: #fdfdfd;
+  border: 1px solid #e2e8f0;
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  color: var(--primary-deep);
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--secondary-emerald);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+  background: white;
+}
+
+label.form-label {
+  margin-bottom: 0.5rem;
+  color: var(--primary-deep);
+  font-weight: 700;
+}
+
+/* --- Navigation Enhancements --- */
+.navbar-minimal {
+  background: linear-gradient(180deg, rgba(0, 21, 41, 0.4) 0%, rgba(0, 21, 41, 0) 100%);
+}
+
+.navbar-minimal.scrolled {
+  background: rgba(0, 21, 41, 0.95);
+  backdrop-filter: blur(15px);
+}
+
+/* --- Icon Box Utility --- */
+.icon-box-emerald {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-mint);
+  color: var(--secondary-emerald);
+  border-radius: 16px;
+  transition: var(--transition-smooth);
+}
+
 /* --- Footer Refinement --- */
 .footer-green-blue {
   background: #000d1a;
@@ -266,15 +403,16 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav-link-m {
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: white;
   text-decoration: none;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   transition: 0.3s;
+  display: block;
 }
 
 .nav-link-m:hover {
   color: var(--secondary-emerald);
-  padding-left: 10px;
+  transform: translateX(10px);
 }
