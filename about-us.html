@@ -1,175 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who We Are | Institutional Trust & Governance | Jubilee Microfinance</title>
+    <title>Our Story, Mission & Leadership | Jubilee Microfinance</title>
     
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about our 13-year journey of economic empowerment, our core values, and the leadership driving financial inclusion in Northern Uganda.">
+    <meta name="keywords" content="jubilee microfinance history, mission statement, financial leadership Uganda">
+    <meta name="author" content="Jubilee Microfinance">
+    <meta name="robots" content="index, follow">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+
     <!-- Vendor CSS -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/vendor/aos/aos.css">
     
-    <!-- Design System -->
+    <!-- Main Design System -->
     <link rel="stylesheet" href="assets/css/main.css">
     
     <style>
-        .navbar-minimal { background: rgba(10, 25, 47, 1); padding: 1rem 0; }
-        .page-hero { padding: 160px 0 100px; background: #0a192f; position: relative; overflow: hidden; }
-        .hero-shape { position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(10, 25, 47, 0) 100%); z-index: 1; }
-        .page-hero-content { position: relative; z-index: 2; }
-        
-        .mobile-nav-panel {
+        #preloader {
             position: fixed;
-            top: 0;
-            right: -100%;
-            width: 85%;
-            max-width: 400px;
-            height: 100vh;
-            background: #0a192f;
-            z-index: 9999;
-            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            padding: 40px;
+            inset: 0;
+            z-index: 10000;
+            background: #001a33;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
         }
-        .mobile-nav-panel.active { right: 0; }
-        .mobile-nav-panel .nav-link-m { font-size: 1.5rem; font-weight: 700; color: white; text-decoration: none; display: block; margin-bottom: 25px; }
-        .close-mobile-nav { background: none; border: none; color: white; font-size: 2rem; position: absolute; top: 30px; right: 30px; }
+        #preloader .spinner-border { color: #10b981 !important; }
     </style>
 </head>
 <body>
-
     <!-- Preloader -->
-    <div id="preloader" style="position: fixed; inset: 0; z-index: 10000; background: #0a192f; display: flex; align-items: center; justify-content: center; transition: 0.5s;">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"></div>
+    <div id="preloader">
+        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
     </div>
 
-    <!-- Navigation -->
-    <header class="navbar-minimal" id="mainNav">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="logo-wrap">
-                <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 50px; filter: brightness(0) invert(1);">
-            </a>
-            <div class="nav-links-p d-none d-lg-flex">
-                <a href="index.html" class="nav-item-p text-white">Home</a>
-                <a href="about-us.html" class="nav-item-p active text-white">Who We Are</a>
-                <a href="ecosystems.html" class="nav-item-p text-white">Ecosystems</a>
-                <a href="impact.html" class="nav-item-p text-white">Impact</a>
-                <a href="branches.html" class="nav-item-p text-white">Branches</a>
-                <a href="contact.html" class="btn-premium btn-p-primary btn-sm ms-4">Join the Network</a>
-            </div>
-            <button class="menu-toggle-p d-lg-none" id="mobileNavToggle"><i class="bi bi-grid-3x3-gap-fill text-white"></i></button>
-        </div>
-    </header>
-
-    <!-- Mobile Nav -->
-    <div class="mobile-nav-panel" id="mobileNavPanel">
-        <button class="close-mobile-nav" id="closeMobileNav"><i class="bi bi-x-lg"></i></button>
-        <div class="mb-5 mt-4">
-             <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 45px; filter: brightness(0) invert(1);">
-        </div>
-        <nav>
-            <a href="index.html" class="nav-link-m">Home</a>
-            <a href="about-us.html" class="nav-link-m">Who We Are</a>
-            <a href="ecosystems.html" class="nav-link-m">Ecosystems</a>
-            <a href="impact.html" class="nav-link-m">Impact Report</a>
-            <a href="branches.html" class="nav-link-m">Regional Hubs</a>
-            <a href="contact.html" class="nav-link-m">Contact Us</a>
-        </nav>
-    </div>
-
-    <main>
-        <!-- Page Hero -->
-        <section class="page-hero">
-            <div class="hero-shape"></div>
-            <div class="container page-hero-content" data-aos="fade-up">
-                <span class="text-secondary fw-bold text-uppercase letter-spacing-1">Governance & Pillars</span>
-                <h1 class="display-3 fw-bold text-white mt-3">Established for <br><span class="text-secondary">Community Growth.</span></h1>
-                <p class="lead text-white opacity-75 mt-4" style="max-width: 600px;">Forging an elite path for financial inclusion across Northern Uganda's regional markets since 2012.</p>
-            </div>
-        </section>
-
-        <!-- Institutional Pillars -->
-        <section class="py-5 bg-white">
-            <div class="container py-5">
-                <div class="row align-items-center mb-5 gy-5">
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <img src="assets/images/pexels-artempodrez-5716034.jpg" class="img-fluid rounded-4 shadow-lg" alt="Institutional Quality">
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-left">
-                        <h2 class="display-5 fw-bold text-primary">Our Institutional Pillars</h2>
-                        <p class="lead text-muted mt-4">Jubilee Microfinance is more than a lending agency; we are a financial architect. Our focus lies in identifying growth potential within clusters and deploying quality capital to catalyze growth.</p>
-                        
-                        <div class="d-flex gap-4 mt-5">
-                            <div class="flex-shrink-0 text-secondary fs-2"><i class="bi bi-shield-check"></i></div>
-                            <div>
-                                <h4 class="fw-bold mb-2">Unwavering Trust</h4>
-                                <p class="small text-muted mb-0">Adopting global best practices in governance to ensure every client's capital is protected.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex gap-4 mt-4">
-                            <div class="flex-shrink-0 text-secondary fs-2"><i class="bi bi-graph-up-arrow"></i></div>
-                            <div>
-                                <h4 class="fw-bold mb-2">Regional Scale</h4>
-                                <p class="small text-muted mb-0">Focused expansion across West Nile, Gulu, Soroti, and Lira to provide local access.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Strategic Board Vision -->
-        <section class="py-5 bg-light">
-            <div class="container py-5">
-                <div class="text-center mb-5" data-aos="fade-up">
-                    <h2 class="display-5 fw-bold">Board & Strategy</h2>
-                    <p class="lead text-muted">A dedicated leadership team focused on long-term sustainability.</p>
-                </div>
-                <!-- Board Grid Placeholder -->
-                <div class="row g-4">
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                      <div class="card border-0 shadow-sm p-4 rounded-4 text-center">
-                        <div class="bg-primary text-white p-4 rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-person-fill fs-2"></i></div>
-                        <h5>Executive Director</h5>
-                        <p class="small text-muted mb-0">Strategy & Operations</p>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer-obsidian py-5">
-        <div class="container text-center opacity-50 small">
-            <p class="mb-0 text-white">&copy; 2026 Jubilee Microfinance. Registered Financial Institution.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-        // Mobile Toggle logic
-        const mobileNavToggle = document.getElementById('mobileNavToggle');
-        const closeMobileNav = document.getElementById('closeMobileNav');
-        const mobileNavPanel = document.getElementById('mobileNavPanel');
-
-        mobileNavToggle.addEventListener('click', () => { mobileNavPanel.classList.add('active'); });
-        closeMobileNav.addEventListener('click', () => { mobileNavPanel.classList.remove('active'); });
+<header class="navbar-minimal" id="mainNav">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html" class="logo-wrap">
+            <img src="assets/images/logo-jubilee.png" alt="Jubilee Microfinance" style="height: 48px; filter: brightness(0) invert(1);">
+        </a>
         
-        window.addEventListener('load', () => { 
-            const p = document.getElementById('preloader'); 
+        <div class="nav-links-p d-none d-lg-flex">
+            <a href="index.html" class="nav-item-p">Home</a>
+            <a href="about-us.html" class="nav-item-p">About Us</a>
+            <div class="dropdown">
+                <a href="ecosystems.html" class="nav-item-p dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Loan Products</a>
+                <ul class="dropdown-menu border-0 shadow-lg mt-3 p-3 rounded-4">
+                    <li><a class="dropdown-item py-2 px-3 rounded-3" href="salary-loans.html">Salary Loans</a></li>
+                    <li><a class="dropdown-item py-2 px-3 rounded-3" href="business-loans.html">Business Boost</a></li>
+                    <li><a class="dropdown-item py-2 px-3 rounded-3" href="agri-loans.html">Agri-Finance</a></li>
+                    <li><a class="dropdown-item py-2 px-3 rounded-3" href="boda-boda-loans.html">Boda Boda Finance</a></li>
+                    <li><a class="dropdown-item py-2 px-3 rounded-3" href="school-fees-loans.html">School Fees</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item py-2 px-3 rounded-3 fw-bold text-emerald" href="ecosystems.html">All Solutions</a></li>
+                </ul>
+            </div>
+            <a href="branches.html" class="nav-item-p">Our Hubs</a>
+            <a href="contact.html" class="btn btn-emerald btn-sm ms-4">Apply Now</a>
+        </div>
+
+        <button class="menu-toggle-p d-lg-none" id="mobileNavToggle" aria-label="Toggle Mobile Menu">
+            <i class="bi bi-list fs-1 text-white"></i>
+        </button>
+    </div>
+</header>
+
+<div class="mobile-nav-panel shadow-lg" id="mobileNavPanel">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+         <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 40px; background: white; border-radius: 5px; padding: 5px;">
+         <button class="btn btn-link text-white p-0" id="closeMobileNav"><i class="bi bi-x-lg fs-2"></i></button>
+    </div>
+    <nav class="d-flex flex-column">
+        <a href="index.html" class="nav-link-m">Home</a>
+        <a href="about-us.html" class="nav-link-m">About Us</a>
+        <div class="ms-3 mb-4">
+            <span class="text-emerald fw-bold small text-uppercase mb-3 d-block">Lending Solutions</span>
+            <div class="d-flex flex-column gap-2">
+                <a href="salary-loans.html" class="text-white text-decoration-none opacity-75">Salary Loans</a>
+                <a href="business-loans.html" class="text-white text-decoration-none opacity-75">Business Boost</a>
+                <a href="agri-loans.html" class="text-white text-decoration-none opacity-75">Agri-Finance</a>
+                <a href="boda-boda-loans.html" class="text-white text-decoration-none opacity-75">Boda Boda</a>
+                <a href="school-fees-loans.html" class="text-white text-decoration-none opacity-75">School Fees</a>
+            </div>
+        </div>
+        <a href="branches.html" class="nav-link-m">Regional Hubs</a>
+        <a href="contact.html" class="btn btn-emerald w-100 p-3 mt-4">Apply Today</a>
+    </nav>
+</div>
+
+<main>
+    <!-- Page Hero -->
+    <section class="section-padding bg-primary-deep text-white" style="padding-top: 15vw;">
+        <div class="container" data-aos="fade-up">
+            <span class="text-emerald fw-bold text-uppercase letter-spacing-1">Establishment & Mission</span>
+            <h1 class="display-2 fw-bold mt-3">Governance-Led <br> <span class="text-emerald">Financial Excellence.</span></h1>
+            <p class="lead opacity-75 mt-4" style="max-width: 600px;">Since 2012, Jubilee Microfinance has been at the forefront of Northern Uganda's economic transformation, delivering capital with precision and integrity.</p>
+        </div>
+    </section>
+
+    <!-- Our Journey -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="assets/images/pexels-moh-dikko-photography-2151327861-33023725.jpg" class="img-fluid rounded-4 shadow-lg" alt="Our Impact">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="display-5 fw-bold text-primary-deep mb-4">A Legacy of Trust</h2>
+                    <p class="text-muted mb-4">Founded in Arua City, Jubilee Microfinance began with a simple mission: to provide the local "Omwoli" (entrepreneur) with the tools they need to scale. Over a decade later, we have grown into a multi-regional institution serving thousands of families.</p>
+                    <p class="text-muted mb-5">We are fully licensed by the Uganda Microfinance Regulatory Authority (UMRA), ensuring that our operations meet the highest standards of consumer protection and financial stability.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <h4 class="fw-bold text-emerald mb-2">13+ Years</h4>
+                            <p class="small text-muted">Of continuous operation without disruption.</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4 class="fw-bold text-emerald mb-2">10+ Districts</h4>
+                            <p class="small text-muted">Deeply served across Northern & West Nile regions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold text-primary-deep">Our Core Values</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">The principles that guide every credit decision and customer interaction.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-5 bg-white rounded-4 shadow-sm h-100 text-center">
+                        <div class="h1 text-emerald mb-4"><i class="bi bi-shield-lock"></i></div>
+                        <h4 class="fw-bold mb-3">Integrity</h4>
+                        <p class="text-muted mb-0">Honesty in every transaction. No hidden fees, no complicated jargon. Just transparent capital.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-5 bg-white rounded-4 shadow-sm h-100 text-center border-emerald border-top border-4">
+                        <div class="h1 text-emerald mb-4"><i class="bi bi-lightning"></i></div>
+                        <h4 class="fw-bold mb-3">Agility</h4>
+                        <p class="text-muted mb-0">We move at the speed of business. Rapid appraisal and instant disbursement ensure you never miss an opportunity.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-5 bg-white rounded-4 shadow-sm h-100 text-center">
+                        <div class="h1 text-emerald mb-4"><i class="bi bi-heart-pulse"></i></div>
+                        <h4 class="fw-bold mb-3">Empathy</h4>
+                        <p class="text-muted mb-0">We are part of the community. We understand your challenges and work with you during difficult seasons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-4 fw-bold text-primary-deep">Driven by <br><span class="text-emerald">Expertise.</span></h2>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <p class="lead text-muted">Our leadership team combines decades of international banking experience with deep local market insights.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center">
+                        <div class="bg-light rounded-4 mb-3 mx-auto" style="width: 100%; aspect-ratio: 1/1; background: #eee url('assets/images/logo-jubilee.png') center/30% no-repeat; filter: grayscale(1);"></div>
+                        <h6 class="fw-bold mb-1">Executive Board</h6>
+                        <p class="small text-muted">Oversight & Strategy</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center">
+                        <div class="bg-light rounded-4 mb-3 mx-auto" style="width: 100%; aspect-ratio: 1/1; background: #eee url('assets/images/logo-jubilee.png') center/30% no-repeat; filter: grayscale(1);"></div>
+                        <h6 class="fw-bold mb-1">Credit Committee</h6>
+                        <p class="small text-muted">Risk & Compliance</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center">
+                        <div class="bg-light rounded-4 mb-3 mx-auto" style="width: 100%; aspect-ratio: 1/1; background: #eee url('assets/images/logo-jubilee.png') center/30% no-repeat; filter: grayscale(1);"></div>
+                        <h6 class="fw-bold mb-1">Field Architects</h6>
+                        <p class="small text-muted">Regional Operations</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-center">
+                        <div class="bg-light rounded-4 mb-3 mx-auto" style="width: 100%; aspect-ratio: 1/1; background: #eee url('assets/images/logo-jubilee.png') center/30% no-repeat; filter: grayscale(1);"></div>
+                        <h6 class="fw-bold mb-1">Client Success</h6>
+                        <p class="small text-muted">Service & Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support CTA -->
+    <section class="py-5 bg-primary-deep text-white">
+        <div class="container py-5 text-center" data-aos="zoom-in">
+            <h2 class="display-5 fw-bold mb-4">Ready to Write Your Success Story?</h2>
+            <p class="lead opacity-75 mb-5 mx-auto" style="max-width: 600px;">Join the thousands of Ugandans who have scaled their dreams with Jubilee capital.</p>
+            <a href="contact.html" class="btn btn-emerald btn-lg px-5">Join the Network Today</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer-green-blue text-white">
+    <div class="container py-4">
+        <div class="row gy-5">
+            <div class="col-lg-4">
+                <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 50px; filter: brightness(0) invert(1);">
+                <p class="mt-4 opacity-75">Empowering Ugandan individuals and SMEs through accessible, transparent, and innovative micro-financing solutions since 2012.</p>
+                <div class="d-flex gap-4 mt-4 h4 mb-0 opacity-50">
+                    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+                <h5 class="fw-bold text-emerald mb-4">Our Loans</h5>
+                <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
+                    <li><a href="salary-loans.html" class="text-white text-decoration-none">Salary Loans</a></li>
+                    <li><a href="business-loans.html" class="text-white text-decoration-none">Business Boost</a></li>
+                    <li><a href="agri-loans.html" class="text-white text-decoration-none">Agri-Finance</a></li>
+                    <li><a href="boda-boda-loans.html" class="text-white text-decoration-none">Boda-Boda Finance</a></li>
+                    <li><a href="school-fees-loans.html" class="text-white text-decoration-none">School Fees</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h5 class="fw-bold text-emerald mb-4">Quick Links</h5>
+                <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="about-us.html" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="branches.html" class="text-white text-decoration-none">Our Hubs</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h5 class="fw-bold text-emerald mb-4">Contact Us</h5>
+                <p class="small opacity-75 mb-2"><i class="bi bi-geo-alt me-2 text-emerald"></i> Arua City House, 2nd Floor</p>
+                <p class="small opacity-75 mb-2"><i class="bi bi-telephone me-2 text-emerald"></i> +256 709 300 099</p>
+                <p class="small opacity-75"><i class="bi bi-envelope me-2 text-emerald"></i> info@jubileemicrofinance.com</p>
+            </div>
+        </div>
+        <hr class="my-5 opacity-10">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center opacity-50 small">
+            <p class="mb-0">&copy; 2026 Jubilee Microfinance. UMRA Licensed MFI. All Rights Reserved.</p>
+            <p class="mb-0">A <a href="#" class="text-white text-decoration-none">SpiderwebUG</a> Digital Experience</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+    
+    // Preloader Removal
+    window.addEventListener('load', () => { 
+        const p = document.getElementById('preloader'); 
+        if(p) {
             p.style.opacity = '0'; 
             setTimeout(() => p.style.display = 'none', 500); 
-        });
-    </script>
+        }
+    });
+
+    // Navigation Logic
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 80) { nav.classList.add('scrolled'); }
+        else { nav.classList.remove('scrolled'); }
+    });
+
+    // Mobile Menu
+    const mToggle = document.getElementById('mobileNavToggle');
+    const mClose = document.getElementById('closeMobileNav');
+    const mPanel = document.getElementById('mobileNavPanel');
+    if(mToggle && mPanel) {
+        mToggle.addEventListener('click', () => mPanel.style.right = '0');
+        mClose.addEventListener('click', () => mPanel.style.right = '-100%');
+        document.querySelectorAll('.nav-link-m').forEach(l => l.addEventListener('click', () => mPanel.style.right = '-100%'));
+    }
+</script>
 </body>
 </html>

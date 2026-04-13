@@ -1,71 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Support Hub | Jubilee Microfinance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <title>Contact Our Support Hub | Jubilee Microfinance</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get in touch with Jubilee Microfinance for loan inquiries, customer support, or branch information across Uganda.">
+    <meta name="keywords" content="contact jubilee microfinance, loan inquiry Uganda, customer support Arua">
+    <meta name="author" content="Jubilee Microfinance">
+    <meta name="robots" content="index, follow">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    
+    <!-- Main Design System -->
     <link rel="stylesheet" href="assets/css/main.css">
+    
     <style>
-        .navbar-minimal { background: #0a192f; padding: 1rem 0; }
-        .page-hero { padding: 160px 0 100px; background: #0a192f; }
+        #preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: #001a33;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+        }
+        #preloader .spinner-border { color: #10b981 !important; }
     </style>
 </head>
 <body>
-    <header class="navbar-minimal"><div class="container d-flex justify-content-between align-items-center"><a href="index.html"><img src="assets/images/logo-jubilee.png" height="50" style="filter: brightness(0) invert(1);"></a><div class="nav-links-p d-none d-lg-flex"><a href="index.html" class="nav-item-p text-white">Home</a><a href="about-us.html" class="nav-item-p text-white">Who We Are</a><a href="contact.html" class="nav-item-p active text-white">Contact</a><a href="contact.html" class="btn-premium btn-p-primary btn-sm ms-4">Join Hub</a></div></div></header>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
 
-    <main>
-        <section class="page-hero text-white">
-            <div class="container" data-aos="fade-up">
-                <span class="text-secondary fw-bold text-uppercase">Direct Support</span>
-                <h1 class="display-3 fw-bold mt-3">Connect With <br> <span class="text-secondary">Our Hubs.</span></h1>
-                <p class="lead opacity-75 mt-4" style="max-width: 600px;">Direct access to our financial architects. We provide localized support to ensure your capital requirements are met with precision.</p>
+<header class="navbar-minimal" id="mainNav">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html" class="logo-wrap">
+            <img src="assets/images/logo-jubilee.png" alt="Jubilee Microfinance" style="height: 48px; filter: brightness(0) invert(1);">
+        </a>
+        
+        <div class="nav-links-p d-none d-lg-flex">
+            <a href="index.html" class="nav-item-p">Home</a>
+            <a href="about-us.html" class="nav-item-p">About Us</a>
+            <div class="dropdown">
+                <a href="ecosystems.html" class="nav-item-p dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Loan Products</a>
+                <ul class="dropdown-menu border-0 shadow-lg mt-3 p-3 rounded-4">
+                    <li><a class="dropdown-item py-2 px-3 rounded-3" href="salary-loans.html">Salary Loans</a></li>
+                    <li><a class="dropdown-item py-2 px-3 rounded-3" href="business-loans.html">Business Boost</a></li>
+                    <li><a class="dropdown-item py-2 px-3 rounded-3" href="agri-loans.html">Agri-Finance</a></li>
+                    <li><a class="dropdown-item py-2 px-3 rounded-3" href="boda-boda-loans.html">Boda Boda Finance</a></li>
+                    <li><a class="dropdown-item py-2 px-3 rounded-3" href="school-fees-loans.html">School Fees</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item py-2 px-3 rounded-3 fw-bold text-emerald" href="ecosystems.html">All Solutions</a></li>
+                </ul>
             </div>
-        </section>
+            <a href="branches.html" class="nav-item-p">Our Hubs</a>
+            <a href="contact.html" class="btn btn-emerald btn-sm ms-4">Apply Now</a>
+        </div>
 
-        <section class="py-5 bg-light">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-7" data-aos="fade-right">
-                        <div class="card p-5 border-0 rounded-4 shadow-sm">
-                            <h2 class="fw-bold mb-4">Send an Inquiry</h2>
-                            <form action="#" method="post" id="contactForm">
-                                <div class="row g-4">
-                                    <div class="col-md-6"><label class="form-label">Full Name</label><input type="text" class="form-control p-3 bg-light border-0" placeholder="John Doe" required></div>
-                                    <div class="col-md-6"><label class="form-label">Email Address</label><input type="email" class="form-control p-3 bg-light border-0" placeholder="john@example.com" required></div>
-                                    <div class="col-12"><label class="form-label">Inquiry Type</label><select class="form-select p-3 bg-light border-0"><option>Agricultural Loan</option><option>Business Growth</option><option>Group Savings</option><option>General Inquiry</option></select></div>
-                                    <div class="col-12"><label class="form-label">Message</label><textarea class="form-control p-3 bg-light border-0" rows="5" placeholder="How can we assist you?" required></textarea></div>
-                                    <div class="col-12"><button type="submit" class="btn-premium btn-p-primary w-100 justify-content-center p-3">Submit Hub Inquiry</button></div>
+        <button class="menu-toggle-p d-lg-none" id="mobileNavToggle" aria-label="Toggle Mobile Menu">
+            <i class="bi bi-list fs-1 text-white"></i>
+        </button>
+    </div>
+</header>
+
+<div class="mobile-nav-panel shadow-lg" id="mobileNavPanel">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+         <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 40px; background: white; border-radius: 5px; padding: 5px;">
+         <button class="btn btn-link text-white p-0" id="closeMobileNav"><i class="bi bi-x-lg fs-2"></i></button>
+    </div>
+    <nav class="d-flex flex-column">
+        <a href="index.html" class="nav-link-m">Home</a>
+        <a href="about-us.html" class="nav-link-m">About Us</a>
+        <div class="ms-3 mb-4">
+            <span class="text-emerald fw-bold small text-uppercase mb-3 d-block">Lending Solutions</span>
+            <div class="d-flex flex-column gap-2">
+                <a href="salary-loans.html" class="text-white text-decoration-none opacity-75">Salary Loans</a>
+                <a href="business-loans.html" class="text-white text-decoration-none opacity-75">Business Boost</a>
+                <a href="agri-loans.html" class="text-white text-decoration-none opacity-75">Agri-Finance</a>
+                <a href="boda-boda-loans.html" class="text-white text-decoration-none opacity-75">Boda Boda</a>
+                <a href="school-fees-loans.html" class="text-white text-decoration-none opacity-75">School Fees</a>
+            </div>
+        </div>
+        <a href="branches.html" class="nav-link-m">Regional Hubs</a>
+        <a href="contact.html" class="btn btn-emerald w-100 p-3 mt-4">Apply Today</a>
+    </nav>
+</div>
+
+<main>
+    <section class="section-padding bg-primary-deep text-white" style="padding-top: 15vw;">
+        <div class="container" data-aos="fade-up">
+            <span class="text-emerald fw-bold text-uppercase letter-spacing-1">Reach Out</span>
+            <h1 class="display-3 fw-bold mt-3">Let's Fuel <br> <span class="text-emerald">Your Future.</span></h1>
+            <p class="lead opacity-75 mt-4" style="max-width: 600px;">Our support team is ready to guide you through the application process. Real people, rapid answers.</p>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="p-5 bg-light rounded-4 shadow-sm">
+                        <h2 class="fw-bold text-primary-deep mb-4">Send a Message</h2>
+                        <form action="https://formspree.io/f/xyzkprow" method="POST" id="contactForm">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-uppercase opacity-50">Full Name</label>
+                                    <input type="text" name="name" class="form-control" placeholder="John Doe" required>
                                 </div>
-                            </form>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-uppercase opacity-50">Phone Number</label>
+                                    <input type="tel" name="phone" class="form-control" placeholder="+256..." required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-bold text-uppercase opacity-50">Loan Interest</label>
+                                    <select name="loan_type" class="form-select">
+                                        <option>Salary Loan</option>
+                                        <option>Business Boost</option>
+                                        <option>Agri-Finance</option>
+                                        <option>Boda Boda Financing</option>
+                                        <option>Other / General Inquiry</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-bold text-uppercase opacity-50">Your Message</label>
+                                    <textarea name="message" class="form-control" rows="5" placeholder="Tell us about your needs..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-emerald btn-lg w-100 p-3">Submit Inquiry</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="d-flex flex-column gap-5">
+                        <div class="d-flex gap-4">
+                            <div class="icon-box-emerald d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px; background: #eefff9; color: #10b981; border-radius: 15px;">
+                                <i class="bi bi-geo-alt fs-3"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Visit Us</h5>
+                                <p class="text-muted small">Arua City House, 2nd Floor, West Nile, Uganda</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-4">
+                            <div class="icon-box-emerald d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px; background: #eefff9; color: #10b981; border-radius: 15px;">
+                                <i class="bi bi-telephone-inbound fs-3"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Call Support</h5>
+                                <p class="text-muted small">+256 709 300 099<br>+256 772 123 456</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-4">
+                            <div class="icon-box-emerald d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px; background: #eefff9; color: #10b981; border-radius: 15px;">
+                                <i class="bi bi-envelope-paper fs-3"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Email Inquiries</h5>
+                                <p class="text-muted small">info@jubileemicrofinance.com<br>support@jubileemicrofinance.com</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-5" data-aos="fade-left">
-                        <div class="mb-5">
-                            <h4 class="fw-bold text-primary mb-3">Headquarters (Arua)</h4>
-                            <p class="mb-1 opacity-75">2nd Floor, City House, Arua Hub</p>
-                            <p class="mb-1 opacity-75">+256 709 300 099</p>
-                            <p class="mb-1 opacity-75">ops@jubileemicrofinance.com</p>
-                        </div>
-                        <div class="mb-5">
-                            <h4 class="fw-bold text-primary mb-3">Operating Hours</h4>
-                            <p class="mb-1 opacity-75 text-secondary">Monday - Friday: 08:00 - 17:00</p>
-                            <p class="mb-1 opacity-75">Saturday: 09:00 - 13:00</p>
-                            <p class="mb-1 opacity-75">Sunday: Closed</p>
-                        </div>
+
+                    <div class="mt-5 p-4 bg-primary-deep text-white rounded-4 shadow">
+                        <h5 class="fw-bold mb-3">Operating Hours</h5>
+                        <ul class="list-unstyled small opacity-75 d-flex flex-column gap-2 mb-0">
+                            <li class="d-flex justify-content-between"><span>Mon - Fri:</span> <span>8:00 AM - 5:00 PM</span></li>
+                            <li class="d-flex justify-content-between"><span>Saturday:</span> <span>9:00 AM - 1:00 PM</span></li>
+                            <li class="d-flex justify-content-between text-emerald fw-bold"><span>Sunday:</span> <span>Closed</span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
 
-    <footer class="footer-obsidian py-4"><div class="container text-center text-white opacity-50 small">&copy; 2026 Jubilee Microfinance.</div></footer>
+<footer class="footer-green-blue text-white">
+    <div class="container py-4">
+        <div class="row gy-5">
+            <div class="col-lg-4">
+                <img src="assets/images/logo-jubilee.png" alt="Logo" style="height: 50px; filter: brightness(0) invert(1);">
+                <p class="mt-4 opacity-75">Empowering Ugandan individuals and SMEs through accessible, transparent, and innovative micro-financing solutions since 2012.</p>
+                <div class="d-flex gap-4 mt-4 h4 mb-0 opacity-50">
+                    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+                <h5 class="fw-bold text-emerald mb-4">Our Loans</h5>
+                <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
+                    <li><a href="salary-loans.html" class="text-white text-decoration-none">Salary Loans</a></li>
+                    <li><a href="business-loans.html" class="text-white text-decoration-none">Business Boost</a></li>
+                    <li><a href="agri-loans.html" class="text-white text-decoration-none">Agri-Finance</a></li>
+                    <li><a href="boda-boda-loans.html" class="text-white text-decoration-none">Boda-Boda Finance</a></li>
+                    <li><a href="school-fees-loans.html" class="text-white text-decoration-none">School Fees</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h5 class="fw-bold text-emerald mb-4">Quick Links</h5>
+                <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="about-us.html" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="branches.html" class="text-white text-decoration-none">Our Hubs</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h5 class="fw-bold text-emerald mb-4">Contact Us</h5>
+                <p class="small opacity-75 mb-2"><i class="bi bi-geo-alt me-2 text-emerald"></i> Arua City House, 2nd Floor</p>
+                <p class="small opacity-75 mb-2"><i class="bi bi-telephone me-2 text-emerald"></i> +256 709 300 099</p>
+                <p class="small opacity-75"><i class="bi bi-envelope me-2 text-emerald"></i> info@jubileemicrofinance.com</p>
+            </div>
+        </div>
+        <hr class="my-5 opacity-10">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center opacity-50 small">
+            <p class="mb-0">&copy; 2026 Jubilee Microfinance. UMRA Licensed MFI. All Rights Reserved.</p>
+            <p class="mb-0">A <a href="#" class="text-white text-decoration-none">SpiderwebUG</a> Digital Experience</p>
+        </div>
+    </div>
+</footer>
 
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script>AOS.init();</script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+    
+    // Preloader Removal
+    window.addEventListener('load', () => { 
+        const p = document.getElementById('preloader'); 
+        if(p) {
+            p.style.opacity = '0'; 
+            setTimeout(() => p.style.display = 'none', 500); 
+        }
+    });
+
+    // Navigation Logic
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 80) { nav.classList.add('scrolled'); }
+        else { nav.classList.remove('scrolled'); }
+    });
+
+    // Mobile Menu
+    const mToggle = document.getElementById('mobileNavToggle');
+    const mClose = document.getElementById('closeMobileNav');
+    const mPanel = document.getElementById('mobileNavPanel');
+    if(mToggle && mPanel) {
+        mToggle.addEventListener('click', () => mPanel.style.right = '0');
+        mClose.addEventListener('click', () => mPanel.style.right = '-100%');
+        document.querySelectorAll('.nav-link-m').forEach(l => l.addEventListener('click', () => mPanel.style.right = '-100%'));
+    }
+</script>
 </body>
 </html>
