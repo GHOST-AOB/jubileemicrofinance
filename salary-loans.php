@@ -12,7 +12,7 @@ include "includes/menu.php";
     <section class="section-padding bg-primary-deep text-white" style="padding-top: 15vw;">
         <div class="container" data-aos="fade-up">
             <span class="text-emerald fw-bold text-uppercase letter-spacing-1">Personal Financing</span>
-            <h1 class="display-3 fw-bold mt-3">Salary Loans <br> <span class="text-emerald">Sente mu Pocket.</span></h1>
+            <h1 class="display-3 fw-bold mt-3">Salary Loans <br> <span class="text-emerald">Cash in Pocket.</span></h1>
             <p class="lead opacity-75 mt-4" style="max-width: 600px;">Quick liquidity against your monthly earnings. No collateral needed for confirmed employees.</p>
         </div>
     </section>

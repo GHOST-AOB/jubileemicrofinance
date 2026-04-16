@@ -1,5 +1,5 @@
 <?php
-$title = "Our Regional Hubs | Jubilee Microfinance";
+$title = "Our Regional Hubs";
 $description = "Locate our regional hubs across Northern Uganda, including Arua, Gulu, Soroti, and Lira. Direct access to localized financial support.";
 $keywords = "jubilee branches, microfinance hubs Arua, Gulu office, Soroti branch, Lira microfinance";
 $featured_image = 'assets/images/pexels-moh-dikko-photography-2151327861-33023725.jpg';
@@ -31,7 +31,7 @@ include "includes/menu.php";
                             <p class="mb-3 text-muted"><i class="bi bi-telephone-fill text-emerald me-2"></i> +256 709 300 099</p>
                             <p class="mb-0 text-muted"><i class="bi bi-envelope-fill text-emerald me-2"></i> arua@jubileemicrofinance.com</p>
                             <hr class="my-4">
-                            <a href="contact.php" class="btn btn-outline-success w-100">Contact Hub</a>
+                            <a href="contact.php" class="btn btn-emerald w-100">Contact Hub</a>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ include "includes/menu.php";
                             <p class="mb-3 text-muted"><i class="bi bi-telephone-fill text-emerald me-2"></i> +256 772 123 456</p>
                             <p class="mb-0 text-muted"><i class="bi bi-envelope-fill text-emerald me-2"></i> gulu@jubileemicrofinance.com</p>
                             <hr class="my-4">
-                            <a href="contact.php" class="btn btn-outline-success w-100">Contact Hub</a>
+                            <a href="contact.php" class="btn btn-emerald w-100">Contact Hub</a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ include "includes/menu.php";
                             <p class="mb-3 text-muted"><i class="bi bi-telephone-fill text-emerald me-2"></i> +256 755 888 999</p>
                             <p class="mb-0 text-muted"><i class="bi bi-envelope-fill text-emerald me-2"></i> soroti@jubileemicrofinance.com</p>
                             <hr class="my-4">
-                            <a href="contact.php" class="btn btn-outline-success w-100">Contact Hub</a>
+                            <a href="contact.php" class="btn btn-emerald w-100">Contact Hub</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ include "includes/menu.php";
                             <p class="mb-3 text-muted"><i class="bi bi-telephone-fill text-emerald me-2"></i> +256 701 444 333</p>
                             <p class="mb-0 text-muted"><i class="bi bi-envelope-fill text-emerald me-2"></i> lira@jubileemicrofinance.com</p>
                             <hr class="my-4">
-                            <a href="contact.php" class="btn btn-outline-success w-100">Contact Hub</a>
+                            <a href="contact.php" class="btn btn-emerald w-100">Contact Hub</a>
                         </div>
                     </div>
                 </div>

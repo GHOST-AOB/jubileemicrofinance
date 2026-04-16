@@ -1,5 +1,5 @@
 <?php
-$title = "Jubilee Microfinance | Sente Mangu, Growth Now";
+$title = "Jubilee Microfinance | Growth Capital, Growth Now";
 $description = "Jubilee Microfinance provides fast, flexible, and affordable loan solutions across Uganda. Agricultural, Salary, Business, and Boda Boda loans with rapid approval.";
 $keywords = "microfinance Uganda, salary loans Kampala, agricultural loans Gulu, business loans Arua, boda boda financing";
 $featured_image = 'assets/images/pexels-kaypics-28112436.jpg';
@@ -15,7 +15,7 @@ include "includes/menu.php";
              <div class="slide-img-overlay"></div>
              <div class="container slide-content-unique text-white" data-aos="fade-right">
                 <span class="badge bg-emerald text-white mb-3 px-3 py-2 shadow-sm">UMRA Licensed Institution</span>
-                <h1 class="display-1 fw-bold text-white mb-3">Sente mangu.<br><span style="color: #10b981;">Growth now.</span></h1>
+                <h1 class="display-1 fw-bold text-white mb-3">Growth solutions.<br><span style="color: #10b981;">Growth now.</span></h1>
                 <p class="lead opacity-75 mb-5" style="max-width: 600px;">Access fast, flexible, and affordable financial solutions designed for the Ugandan market. From Agriculture to Business, we fuel your dreams.</p>
                 <div class="d-flex flex-wrap gap-3">
                     <a href="contact.php" class="btn btn-emerald btn-lg px-4 fs-5">Get a Loan Today</a>
