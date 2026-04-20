@@ -11,7 +11,7 @@ include "includes/menu.php";
 <main id="top">
     <!-- Hero Slider -->
     <section class="slider-container-unique">
-        <div class="slide-unique active" style="background-image: url('assets/images/pexels-kaypics-28112436.jpg'); background-size: cover; background-position: center;">
+        <div class="slide-unique active" data-bg="assets/images/pexels-kaypics-28112436.jpg" style="background-size: cover; background-position: center;">
              <div class="slide-img-overlay"></div>
              <div class="container slide-content-unique text-white" data-aos="fade-right">
                 <span class="badge bg-emerald text-white mb-3 px-3 py-2 shadow-sm">UMRA Licensed Institution</span>
@@ -24,7 +24,7 @@ include "includes/menu.php";
              </div>
         </div>
         
-        <div class="slide-unique" style="background-image: url('assets/images/Agriculture.jpg'); background-size: cover; background-position: center;">
+        <div class="slide-unique" data-bg="assets/images/Agriculture.jpg" style="background-size: cover; background-position: center;">
             <div class="slide-img-overlay"></div>
             <div class="container slide-content-unique text-white">
                <span class="badge bg-emerald text-white mb-3 px-3 py-2 shadow-sm">Agricultural Financing</span>

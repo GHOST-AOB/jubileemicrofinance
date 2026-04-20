@@ -46,18 +46,34 @@
 </footer>
 
 <!-- Scripts -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-4NNODhjNl1wUGKJkgmZFfHXHqhJ3WbSTqwG8bUqNyJy9gTK1d0b6HjPd6u7Q7g8" crossorigin="anonymous"></script>
 <script>
     AOS.init({ duration: 1000, once: true });
     
-    // Preloader Removal
-    window.addEventListener('load', () => { 
+    // Preloader Removal - Hide when DOM is ready instead of waiting for all resources
+    document.addEventListener('DOMContentLoaded', () => { 
         const p = document.getElementById('preloader'); 
         if(p) {
-            p.style.opacity = '0'; 
-            setTimeout(() => p.style.display = 'none', 500); 
+            // Add a small delay to ensure smooth transition
+            setTimeout(() => {
+                p.style.opacity = '0'; 
+                setTimeout(() => p.style.display = 'none', 500); 
+            }, 100);
         }
+    });
+
+    // Lazy load hero background images after preloader is gone
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            const slides = document.querySelectorAll('.slide-unique[data-bg]');
+            slides.forEach(slide => {
+                const bgUrl = slide.getAttribute('data-bg');
+                if (bgUrl) {
+                    slide.style.backgroundImage = `url('${bgUrl}')`;
+                }
+            });
+        }, 600); // Load after preloader animation completes
     });
 
     // Optimized Counter Logic
